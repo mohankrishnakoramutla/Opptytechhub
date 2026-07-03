@@ -3745,6 +3745,211 @@ header.past-hero .phone-link:hover {
     }
 }
 
+
+
+.why-oppty-hero {
+    position: relative;
+    background: linear-gradient(135deg,
+            #020617 0%,
+            #0a1230 25%,
+            #020617 50%,
+            #0d1842 75%,
+            #020617 100%);
+    padding: 120px 0;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+.wo-container-hero {
+    position: relative;
+    z-index: 1;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ── FIX: labels were clipped by .wo-mini's overflow:hidden ── */
+.why-oppty-hero .wo-mini {
+    overflow: visible;
+}
+
+.why-oppty-hero .wo-mini__inner {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+
+/* ── HERO WHY-OPPTY: CENTERING FIX (corrected) ── */
+.why-oppty-hero .wo-container-hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wo-grid--centered {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+}
+
+/* This is the missing piece — give the visual an explicit width
+   so it doesn't shrink to fit its contents inside the flex row */
+.wo-grid--centered .wo-visual {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wo-grid--centered .wo-visual__wrap {
+    width: 100%;
+    max-width: 480px;
+}
+
+.why-oppty-hero .wo-container-hero {
+    display: flex;
+    justify-content: center;
+}
+
+/* ── RADAR SWEEP LINE ── */
+.wo-sweep {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg,
+        rgba(242,101,34,0.35) 0deg,
+        transparent 25deg,
+        transparent 335deg,
+        rgba(242,101,34,0.35) 360deg);
+    animation: wo-sweep-spin 6s linear infinite;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.7;
+}
+
+@keyframes wo-sweep-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── SECOND PULSE RING ON CENTER BADGE ── */
+.wo-badge__pulse--2 {
+    animation: wo-badge-pulse 3s ease-in-out infinite 1.5s;
+}
+
+/* ── ORBIT WRAPPER: whole ring of logos rotates slowly ── */
+.wo-orbit {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    animation: wo-orbit-spin 48s linear infinite;
+}
+
+@keyframes wo-orbit-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Each mini badge keeps its own gentle float, orbit handles the big rotation */
+.wo-mini {
+    animation: wo-mini-float 5s ease-in-out infinite;
+}
+
+/* Inner content counter-rotates at the same speed/direction-reversed
+   so icons + labels always stay upright while the ring turns */
+.wo-mini__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: wo-mini-counter-spin 48s linear infinite;
+}
+
+@keyframes wo-mini-counter-spin {
+    to { transform: rotate(-360deg); }
+}
+
+.wo-mini__inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+/* ── VISIBLE NAME LABEL UNDER EACH LOGO ── */
+.wo-mini__label {
+    position: absolute;
+    left: 50%;
+    bottom: -26px;
+    transform: translateX(-50%) rotate(0deg);
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(10, 14, 28, 0.82);
+    border: 1px solid rgba(242, 101, 34, 0.4);
+    padding: 3px 10px;
+    border-radius: 100px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    opacity: 0;
+    animation: wo-label-counter-spin 48s linear infinite, wo-label-fadein 0.6s ease forwards;
+    animation-delay: 0s, 1.2s;
+    pointer-events: none;
+}
+
+/* Counter-rotate the label along with the icon (same motion as .wo-mini__inner) */
+@keyframes wo-label-counter-spin {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to   { transform: translateX(-50%) rotate(-360deg); }
+}
+
+@keyframes wo-label-fadein {
+    to { opacity: 1; }
+}
+
+.wo-mini:hover .wo-mini__label {
+    border-color: var(--orange);
+    background: rgba(242, 101, 34, 0.22);
+    box-shadow: 0 6px 20px rgba(242, 101, 34, 0.4);
+}
+
+/* stagger each badge's float so the ring feels alive, not synced */
+.wo-mini--1 { animation-delay: 0s; }
+.wo-mini--2 { animation-delay: 0.6s; }
+.wo-mini--3 { animation-delay: 1.2s; }
+.wo-mini--4 { animation-delay: 1.8s; }
+.wo-mini--5 { animation-delay: 2.4s; }
+.wo-mini--6 { animation-delay: 3.0s; }
+.wo-mini--7 { animation-delay: 3.6s; }
+.wo-mini--8 { animation-delay: 4.2s; }
+
+/* Slightly stronger hover glow, color synced to orange brand */
+.wo-mini:hover {
+    transform: scale(1.22) rotate(-4deg);
+    box-shadow:
+        0 18px 44px rgba(242, 101, 34, 0.5),
+        0 0 0 2px rgba(242, 101, 34, 0.7) inset;
+}
+
+/* pause orbit + counter-spin on hover of the whole cluster so labels are easy to read */
+.wo-visual__wrap:hover .wo-orbit,
+.wo-visual__wrap:hover .wo-mini__inner,
+.wo-visual__wrap:hover .wo-mini__label {
+    animation-play-state: paused;
+}
+
+
 /* WHY CHOOSE OPPTY SECTION */
 .why-oppty {
     position: relative;
