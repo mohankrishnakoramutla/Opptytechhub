@@ -1,101 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oppty — All-in-One Business Platform</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./CSS/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oppty — All-in-One Business Platform</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./CSS/index.css">
 </head>
+
 <body>
 
-    <!-- ── PAGE LOADER -->
-    <div class="page-loader is-visible" id="pageLoader">
-        <div class="page-loader__logo">
-            <div class="page-loader__ring"></div>
-            <div class="page-loader__ring"></div>
-            <div class="page-loader__ring"></div>
-            <img class="page-loader__img" src="./ASSETS/images/oppty.png" alt="Loading" />
-        </div>
+  <!-- ── PAGE LOADER -->
+  <div class="page-loader is-visible" id="pageLoader">
+    <div class="page-loader__logo">
+      <div class="page-loader__ring"></div>
+      <div class="page-loader__ring"></div>
+      <div class="page-loader__ring"></div>
+      <img class="page-loader__img" src="./ASSETS/images/oppty.png" alt="Loading" />
     </div>
+  </div>
 
-    <!-- ── FLOATING SOCIAL BAR ── -->
-    <div class="social-bar">
-        <a href="https://www.instagram.com/opptytech?igsh=YTExdTBsc3Y4ejU2" target="_blank" rel="noopener" aria-label="Instagram" class="social-bar__link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+  <!-- ── FLOATING SOCIAL BAR ── -->
+  <div class="social-bar">
+    <a href="https://www.instagram.com/opptytech?igsh=YTExdTBsc3Y4ejU2" target="_blank" rel="noopener"
+      aria-label="Instagram" class="social-bar__link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+      </svg>
+    </a>
+    <a href="https://youtube.com/@mroppty?si=NbpyNIM-vkHyeLYM" target="_blank" rel="noopener" aria-label="YouTube"
+      class="social-bar__link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/opptytech/" target="_blank" rel="noopener" aria-label="LinkedIn"
+      class="social-bar__link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <img class="logo-img" src="./ASSETS/images/oppty.png" alt="Oppty Logo" />
+      </a>
+      <nav>
+        <a href="index.html" class="nav-active">Home</a>
+        <a href="./HTML/about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown__toggle" onclick="toggleNavDropdown(this); return false;">Our Services
+            <svg class="nav-dropdown__arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="./HTML/IT_services.html"><span class="dd-icon dd-icon--blue"><svg viewBox="0 0 24 24"
+                    fill="none">
+                    <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  </svg></span><span class="dd-label">IT Services</span></a></li>
+            <li><a href="./HTML/ITES_services.html"><span class="dd-icon dd-icon--orange"><svg viewBox="0 0 24 24"
+                    fill="none">
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" />
+                  </svg></span><span class="dd-label">ITES Services</span></a></li>
+
+          </ul>
+        </div>
+        <a href="./HTML/contact.html">Contact Us</a>
+        <a href="./HTML/products.html">Products</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="./HTML/Oppty_learn.html" class="btn btn-academy">Learnly</a>
+        <a href="#" class="btn btn-training">Training Partner</a>
+        <a href="tel:+919491209900" class="phone-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z" />
+          </svg>
+          +91 9491209900
         </a>
-        <a href="https://youtube.com/@mroppty?si=NbpyNIM-vkHyeLYM" target="_blank" rel="noopener" aria-label="YouTube" class="social-bar__link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/opptytech/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-bar__link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="./HTML/about.html">About Us</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown__toggle" onclick="toggleMobileDropdown(this)" aria-expanded="false">Our Services
+          <svg class="mobile-dropdown__arrow" viewBox="0 0 10 6" fill="none">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <ul class="mobile-dropdown__menu">
+          <li><a href="./HTML/IT_services.html">IT Services</a></li>
+          <li><a href="./HTML/ITES_services.html">ITES Services</a></li>
 
-    <!-- ── NAVBAR ── -->
-    <header id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="logo">
-                <img class="logo-img" src="./ASSETS/images/oppty.png" alt="Oppty Logo" />
-            </a>
-            <nav>
-                <a href="index.html" class="nav-active">Home</a>
-                <a href="./HTML/about.html">About Us</a>
-                <div class="nav-dropdown">
-                    <a href="#" class="nav-dropdown__toggle" onclick="toggleNavDropdown(this); return false;">Our Services
-                        <svg class="nav-dropdown__arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <ul class="nav-dropdown__menu">
-                        <li><a href="./HTML/IT_services.html"><span class="dd-icon dd-icon--blue"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="dd-label">IT Services</span></a></li>
-                        <li><a href="./HTML/ITES_services.html"><span class="dd-icon dd-icon--orange"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M6.3 6.3a8 8 0 0 0 0 11.4M17.7 6.3a8 8 0 0 1 0 11.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="dd-label">ITES Services</span></a></li>
-                        
-                    </ul>
-                </div>
-                <a href="./HTML/contact.html">Contact Us</a>
-                <a href="./HTML/products.html">Products</a>
-            </nav>
-            <div class="nav-actions">
-                <a href="./HTML/Oppty_learn.html" class="btn btn-academy">Learnly</a>
-                <a href="#" class="btn btn-training">Training Partner</a>
-                <a href="tel:+919491209900" class="phone-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z"/></svg>
-                    +91 9491209900
-                </a>
-            </div>
-            <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-        <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">Home</a>
-            <a href="./HTML/about.html">About Us</a>
-            <div class="mobile-dropdown">
-                <button class="mobile-dropdown__toggle" onclick="toggleMobileDropdown(this)" aria-expanded="false">Our Services
-                    <svg class="mobile-dropdown__arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </button>
-                <ul class="mobile-dropdown__menu">
-                    <li><a href="./HTML/IT_services.html">IT Services</a></li>
-                    <li><a href="./HTML/ITES_services.html">ITES Services</a></li>
-                
-                </ul>
-            </div>
-            <a href="./HTML/contact.html">Contact Us</a>
-            <a href="./HTML/products.html">Products</a>
-            <div class="mobile-btns">
-                <a href="./HTML/Oppty_learn.html" class="btn btn-academy">Learnly</a>
-                <a href="#" class="btn btn-training">Training Partner</a>
-            </div>
-        </div>
-    </header>
+        </ul>
+      </div>
+      <a href="./HTML/contact.html">Contact Us</a>
+      <a href="./HTML/products.html">Products</a>
+      <div class="mobile-btns">
+        <a href="./HTML/Oppty_learn.html" class="btn btn-academy">Learnly</a>
+        <a href="#" class="btn btn-training">Training Partner</a>
+      </div>
+    </div>
+  </header>
 
 
 
 
-    <section class="why-oppty-hero" id="why-oppty-hero">
+  <section class="why-oppty-hero" id="why-oppty-hero">
 
     <div class="wo-bg">
       <div class="wo-bg__gradient"></div>
@@ -108,7 +140,40 @@
     </div>
 
     <div class="wo-container-hero">
-      <div class="wo-grid wo-grid--centered">
+      <div class="wo-grid wo-grid--split">
+
+        <!-- LEFT: Brand story -->
+        <div class="woh-side woh-side--left" data-wo-reveal="fade-right">
+          <div class="woh-eyebrow">
+            <span class="woh-eyebrow__dot"></span>
+            <span class="woh-eyebrow__text">Empowering People. Enabling Possibilities.</span>
+          </div>
+          <h1 class="woh-title">Building Digital Solutions that Drive <span class="woh-accent">Real Impact</span></h1>
+          <p class="woh-desc">Oppty Tech Hub Pvt Ltd is a technology-driven company delivering innovative software solutions, IT training, and staffing services that help businesses grow, adapt, and succeed in a digital-first world.</p>
+
+          <div class="woh-list">
+            <div class="woh-item">
+              <div class="woh-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+              </div>
+              <div><h4>Innovative Solutions</h4><p>Smart, scalable and future-ready solutions tailored to your needs.</p></div>
+            </div>
+            <div class="woh-item">
+              <div class="woh-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div><h4>Expert People</h4><p>A team of passionate professionals committed to your success.</p></div>
+            </div>
+            
+          </div>
+
+          <div class="woh-btns">
+            <a href="#products" class="woh-btn woh-btn--solid">Explore Our Services
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="./HTML/about.html" class="woh-btn woh-btn--ghost">Know More About Us</a>
+          </div>
+        </div>
 
         <div class="wo-visual" data-wo-reveal="fade-right">
           <div class="wo-visual__wrap">
@@ -124,7 +189,7 @@
 
             <div class="wo-badge">
               <div class="wo-badge__inner">
-                <img src="./ASSETS/images/oppty.png" alt="Oppty" class="wo-badge__logo"/>
+                <img src="./ASSETS/images/oppty.png" alt="Oppty" class="wo-badge__logo" />
               </div>
               <div class="wo-badge__pulse"></div>
               <div class="wo-badge__pulse wo-badge__pulse--2"></div>
@@ -180,10 +245,47 @@
                 </span>
                 <span class="wo-mini__label">Supportly</span>
               </a>
->>>>>>> 169f2016164667d41df4efcf2f6c3ab04d576484
+              
             </div>
 
           </div>
+        </div>
+
+
+         <!-- RIGHT: Why Choose Oppty -->
+        <div class="woh-side woh-side--right" data-wo-reveal="fade-left">
+          <h2 class="woh-title">Why Choose <span class="woh-accent">Oppty?</span></h2>
+
+          <div class="woh-list">
+            <div class="woh-item">
+              <div class="woh-icon woh-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <div><h4>Reliable &amp; Secure</h4><p>We build secure, reliable and enterprise-grade solutions.</p></div>
+            </div>
+            <div class="woh-item">
+              <div class="woh-icon woh-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <div><h4>Scalable &amp; Flexible</h4><p>Solutions that grow with your business and adapt to change.</p></div>
+            </div>
+            <div class="woh-item">
+              <div class="woh-icon woh-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2z"/></svg>
+              </div>
+              <div><h4>Technology Driven</h4><p>We leverage the latest technologies to deliver cutting-edge solutions.</p></div>
+            </div>
+            <div class="woh-item">
+              <div class="woh-icon woh-icon--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div><h4>Committed to Success</h4><p>Your success is our mission. We're with you, every step.</p></div>
+            </div>
+          </div>
+
+          <a href="./HTML/contact.html" class="woh-btn woh-btn--solid">Let's Build Something Great
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
 
       </div>
@@ -191,212 +293,361 @@
   </section>
 
 
-  
-    <!-- ── HERO ── -->
-    <main class="hero-container">
-        <section class="hero" id="hero">
 
-            <!-- Background -->
-            <div class="hero-scene-bg">
-                <canvas class="hero-stars-canvas" id="heroStarsCanvas"></canvas>
-                <div class="hero-glow hero-glow--orange"></div>
-                <div class="hero-glow hero-glow--blue"></div>
-                <div class="hero-glow hero-glow--purple"></div>
-                <div class="hero-grid-overlay"></div>
+  <!-- ── HERO ── -->
+  <main class="hero-container">
+    <section class="hero" id="hero">
+
+      <!-- Background -->
+      <!-- Background -->
+      <div class="hero-scene-bg">
+        <canvas class="hero-stars-canvas" id="heroStarsCanvas"></canvas>
+        <div class="hero-glow hero-glow--orange"></div>
+        <div class="hero-glow hero-glow--blue"></div>
+        <div class="hero-glow hero-glow--purple"></div>
+        <div class="hero-grid-overlay"></div>
+
+        <!-- NEW: matches why-oppty-hero background language -->
+        <div class="hero-mesh-layer"></div>
+        <div class="hero-rays-layer"></div>
+        <div class="hero-particles-layer">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- NEW: landing-page context ring around the ecosystem, echoes why-oppty-hero orbit -->
+        <div class="hero-ctx-ring">
+          <span class="hero-ctx-chip hero-ctx-chip--1">8+ SaaS Products</span>
+          <span class="hero-ctx-chip hero-ctx-chip--2">One Unified Ecosystem</span>
+          <span class="hero-ctx-chip hero-ctx-chip--3">500+ Businesses Trust Us</span>
+        </div>
+      </div>
+
+      <div class="outer">
+
+        <!-- LEFT: Brand Story -->
+        <div class="brand-story">
+          <div class="label-container">
+            <div class="label-dot"></div>
+            <span class="badge-label">OPPTY SAAS ECOSYSTEM</span>
+          </div>
+          <h1>One Suite.<br><span class="highlight">Infinite<br>Possibilities.</span></h1>
+          <p class="brand-subheading">A unified ecosystem of intelligent SaaS products — built to help organizations
+            <em>manage work</em>, <em>connect teams</em> and <em>grow businesses</em>.
+          </p>
+          <div class="hero-stats">
+            <div class="hero-stat"><span class="hero-stat__num">8+</span><span class="hero-stat__label">Products</span>
             </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat"><span class="hero-stat__num">500+</span><span
+                class="hero-stat__label">Businesses</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat"><span class="hero-stat__num">99.9%</span><span class="hero-stat__label">Uptime</span>
+            </div>
+          </div>
+          <div class="brand-blocks-list">
+            <div class="essence-item" data-essence="work">
+              <div class="essence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg></div>
+              <div class="essence-body">
+                <h4>Who We Are</h4>
+                <p>A technology-driven company building innovative SaaS solutions for the future.</p>
+              </div>
+            </div>
+            <div class="essence-item" data-essence="connect">
+              <div class="essence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg></div>
+              <div class="essence-body">
+                <h4>What We Do</h4>
+                <p>We build products that simplify work, connect teams and accelerate business growth.</p>
+              </div>
+            </div>
+            <div class="essence-item" data-essence="grow">
+              <div class="essence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                  <polyline points="16 7 22 7 22 13" />
+                </svg></div>
+              <div class="essence-body">
+                <h4>Brand Promise</h4>
+                <p style="font-weight:700">Manage <span>Work.</span> Connect <span>Teams.</span> Grow
+                  <span>Businesses.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="button-actions">
+            <a href="#products" class="btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+              Explore Platform
+            </a>
+            <button class="cta-button">
+              Book Consultation
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+          <div class="trust-row">
+            <span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>Enterprise Security</span>
+            <span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>Free Trial</span>
+            <span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.12 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>24/7 Support</span>
+          </div>
+        </div>
 
-            <div class="outer">
-
-                <!-- LEFT: Brand Story -->
-                <div class="brand-story">
-                    <div class="label-container">
-                        <div class="label-dot"></div>
-                        <span class="badge-label">OPPTY SAAS ECOSYSTEM</span>
-                    </div>
-                    <h1>One Suite.<br><span class="highlight">Infinite<br>Possibilities.</span></h1>
-                    <p class="brand-subheading">A unified ecosystem of intelligent SaaS products — built to help organizations <em>manage work</em>, <em>connect teams</em> and <em>grow businesses</em>.</p>
-                    <div class="hero-stats">
-                        <div class="hero-stat"><span class="hero-stat__num">8+</span><span class="hero-stat__label">Products</span></div>
-                        <div class="hero-stat-divider"></div>
-                        <div class="hero-stat"><span class="hero-stat__num">500+</span><span class="hero-stat__label">Businesses</span></div>
-                        <div class="hero-stat-divider"></div>
-                        <div class="hero-stat"><span class="hero-stat__num">99.9%</span><span class="hero-stat__label">Uptime</span></div>
-                    </div>
-                    <div class="brand-blocks-list">
-                        <div class="essence-item" data-essence="work">
-                            <div class="essence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-                            <div class="essence-body"><h4>Who We Are</h4><p>A technology-driven company building innovative SaaS solutions for the future.</p></div>
-                        </div>
-                        <div class="essence-item" data-essence="connect">
-                            <div class="essence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                            <div class="essence-body"><h4>What We Do</h4><p>We build products that simplify work, connect teams and accelerate business growth.</p></div>
-                        </div>
-                        <div class="essence-item" data-essence="grow">
-                            <div class="essence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-                            <div class="essence-body"><h4>Brand Promise</h4><p style="font-weight:700">Manage <span>Work.</span> Connect <span>Teams.</span> Grow <span>Businesses.</span></p></div>
-                        </div>
-                    </div>
-                    <div class="button-actions">
-                        <a href="#products" class="btn-secondary">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                            Explore Platform
-                        </a>
-                        <button class="cta-button">
-                            Book Consultation
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </button>
-                    </div>
-                    <div class="trust-row">
-                        <span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Enterprise Security</span>
-                        <span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Trial</span>
-                        <span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.12 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>24/7 Support</span>
-                    </div>
+        <!-- RIGHT: Product Cards -->
+        <div class="product-ecosystem">
+          <div class="ecosystem-grid">
+            <!-- Taskly -->
+            <article class="premium-card" data-category="Taskly">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/taskly.png" alt="Taskly" /></div>
+                <div class="product-meta"><span class="product-name">Taskly</span><span class="product-category">Task
+                    Management</span>
                 </div>
 
-                <!-- RIGHT: Product Cards -->
-                <div class="product-ecosystem">
-                    <div class="ecosystem-grid">
-                        <!-- Taskly -->
-                        <article class="premium-card" data-category="Taskly">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/taskly.png" alt="Taskly" /></div>
-                                <div class="product-meta"><span class="product-name">Taskly</span><span class="product-category">Task Management</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">Task Management</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">Plan projects efficiently</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Track deadlines effortlessly</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Boost team productivity</span></div>
-                                <a href="https://task.theoppty.com/" target="_blank" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Chatly -->
-                        <article class="premium-card" data-category="Chatly">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/chatly.png" alt="Chatly" /></div>
-                                <div class="product-meta"><span class="product-name">Chatly</span><span class="product-category">Team Chat</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">Team Chat</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">Real-time communication</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Instant collaboration</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Secure team messaging</span></div>
-                                <a href="https://chat.theoppty.com/login" target="_blank" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Peoplely -->
-                        <article class="premium-card" data-category="Peoplely">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/peoplely.png" alt="Peoplely" /></div>
-                                <div class="product-meta"><span class="product-name">Peoplely</span><span class="product-category">HRMS</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">HRMS</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">HR management</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Attendance and payroll</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Employee self-service</span></div>
-                                <a href="https://theoppty.com/" target="_blank" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Cliently -->
-                        <article class="premium-card" data-category="Cliently">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/cliently.png" alt="Cliently" /></div>
-                                <div class="product-meta"><span class="product-name">Cliently</span><span class="product-category">CRM</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">CRM</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">Customer relationships</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Sales pipeline tracking</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Automate follow-ups</span></div>
-                                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Meetly -->
-                        <article class="premium-card" data-category="Meetly">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/meetly.png" alt="Meetly" /></div>
-                                <div class="product-meta"><span class="product-name">Meetly</span><span class="product-category">Video Meetings</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">Video Meetings</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">HD video conferencing</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Remote collaboration</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Screen sharing & recording</span></div>
-                                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Hirely -->
-                        <article class="premium-card" data-category="Hirely">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/hirely.png" alt="Hirely" /></div>
-                                <div class="product-meta"><span class="product-name">Hirely</span><span class="product-category">Recruitment ATS</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">Recruitment ATS</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">Recruitment automation</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Candidate tracking</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Smart interview scheduling</span></div>
-                                <a href="https://hiring.theoppty.com/" target="_blank" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Learnly -->
-                        <article class="premium-card" data-category="Learnly">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/learnly.png" alt="Learnly" /></div>
-                                <div class="product-meta"><span class="product-name">Learnly</span><span class="product-category">LMS</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">Learning Management</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">Employee upskilling</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Learning management</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Certifications & tracking</span></div>
-                                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                        <!-- Supportly -->
-                        <article class="premium-card" data-category="Supportly">
-                            <div class="product-top">
-                                <div class="product-icon-wrapper"><img src="./ASSETS/images/supportly.png" alt="Supportly" /></div>
-                                <div class="product-meta"><span class="product-name">Supportly</span><span class="product-category">Helpdesk</span></div>
-                            </div>
-                            <div class="card-category-display">
-                                <span class="card-category-icon">✓</span>
-                                <span class="card-category-label">Helpdesk</span>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="benefit-item"><span class="benefit-text">Helpdesk ticketing</span></div>
-                                <div class="benefit-item"><span class="benefit-text">Reliable customer support</span></div>
-                                <div class="benefit-item"><span class="benefit-text">SLA & escalation management</span></div>
-                                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                            </div>
-                        </article>
-                    </div>
+                <div class="product-meta">
+                  <span class="product-name">Taskly</span>
+                  <span class="product-category">Task Management</span>
+                  <span class="product-tagline">Tasks simplified, productivity amplified</span>
                 </div>
-            </div>
-        </section>
-    </main>
+
+                <div class="product-meta">
+                  <span class="product-name">Chatly</span>
+                  <span class="product-category">Team Chat</span>
+                  <span class="product-tagline">Conversations that matter</span>
+                </div>
+
+
+                <div class="product-meta">
+                  <span class="product-name">Peoplely</span>
+                  <span class="product-category">HRMS</span>
+                  <span class="product-tagline">Connecting talent with opportunities</span>
+                </div>
+
+                <div class="product-meta">
+                  <span class="product-name">Cliently</span>
+                  <span class="product-category">CRM</span>
+                  <span class="product-tagline">Building lasting partnerships</span>
+                </div>
+
+                <div class="product-meta">
+                  <span class="product-name">Meetly</span>
+                  <span class="product-category">Video Meetings</span>
+                  <span class="product-tagline">Meetings that drive decisions</span>
+                </div>
+
+                <div class="product-meta">
+                  <span class="product-name">Hirely</span>
+                  <span class="product-category">Recruitment ATS</span>
+                  <span class="product-tagline">Hiring made smarter</span>
+                </div>
+
+                <div class="product-meta">
+                  <span class="product-name">Learnly</span>
+                  <span class="product-category">LMS</span>
+                  <span class="product-tagline">Learning that builds futures</span>
+                </div>
+
+                <div class="product-meta">
+                  <span class="product-name">Supportly</span>
+                  <span class="product-category">Helpdesk</span>
+                  <span class="product-tagline">Support that empowers</span>
+                </div>
+
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">Task Management</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">Plan projects efficiently</span></div>
+                <div class="benefit-item"><span class="benefit-text">Track deadlines effortlessly</span></div>
+                <div class="benefit-item"><span class="benefit-text">Boost team productivity</span></div>
+                <a href="https://task.theoppty.com/" target="_blank" class="card-explore-btn">Explore <svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Chatly -->
+            <article class="premium-card" data-category="Chatly">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/chatly.png" alt="Chatly" /></div>
+                <div class="product-meta"><span class="product-name">Chatly</span><span class="product-category">Team
+                    Chat</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">Team Chat</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">Real-time communication</span></div>
+                <div class="benefit-item"><span class="benefit-text">Instant collaboration</span></div>
+                <div class="benefit-item"><span class="benefit-text">Secure team messaging</span></div>
+                <a href="https://chat.theoppty.com/login" target="_blank" class="card-explore-btn">Explore <svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Peoplely -->
+            <article class="premium-card" data-category="Peoplely">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/peoplely.png" alt="Peoplely" /></div>
+                <div class="product-meta"><span class="product-name">Peoplely</span><span
+                    class="product-category">HRMS</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">HRMS</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">HR management</span></div>
+                <div class="benefit-item"><span class="benefit-text">Attendance and payroll</span></div>
+                <div class="benefit-item"><span class="benefit-text">Employee self-service</span></div>
+                <a href="https://theoppty.com/" target="_blank" class="card-explore-btn">Explore <svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Cliently -->
+            <article class="premium-card" data-category="Cliently">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/cliently.png" alt="Cliently" /></div>
+                <div class="product-meta"><span class="product-name">Cliently</span><span
+                    class="product-category">CRM</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">CRM</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">Customer relationships</span></div>
+                <div class="benefit-item"><span class="benefit-text">Sales pipeline tracking</span></div>
+                <div class="benefit-item"><span class="benefit-text">Automate follow-ups</span></div>
+                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Meetly -->
+            <article class="premium-card" data-category="Meetly">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/meetly.png" alt="Meetly" /></div>
+                <div class="product-meta"><span class="product-name">Meetly</span><span class="product-category">Video
+                    Meetings</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">Video Meetings</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">HD video conferencing</span></div>
+                <div class="benefit-item"><span class="benefit-text">Remote collaboration</span></div>
+                <div class="benefit-item"><span class="benefit-text">Screen sharing & recording</span></div>
+                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Hirely -->
+            <article class="premium-card" data-category="Hirely">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/hirely.png" alt="Hirely" /></div>
+                <div class="product-meta"><span class="product-name">Hirely</span><span
+                    class="product-category">Recruitment ATS</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">Recruitment ATS</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">Recruitment automation</span></div>
+                <div class="benefit-item"><span class="benefit-text">Candidate tracking</span></div>
+                <div class="benefit-item"><span class="benefit-text">Smart interview scheduling</span></div>
+                <a href="https://hiring.theoppty.com/" target="_blank" class="card-explore-btn">Explore <svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Learnly -->
+            <article class="premium-card" data-category="Learnly">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/learnly.png" alt="Learnly" /></div>
+                <div class="product-meta"><span class="product-name">Learnly</span><span
+                    class="product-category">LMS</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">Learning Management</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">Employee upskilling</span></div>
+                <div class="benefit-item"><span class="benefit-text">Learning management</span></div>
+                <div class="benefit-item"><span class="benefit-text">Certifications & tracking</span></div>
+                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+            <!-- Supportly -->
+            <article class="premium-card" data-category="Supportly">
+              <div class="product-top">
+                <div class="product-icon-wrapper"><img src="./ASSETS/images/supportly.png" alt="Supportly" /></div>
+                <div class="product-meta"><span class="product-name">Supportly</span><span
+                    class="product-category">Helpdesk</span></div>
+              </div>
+              <div class="card-category-display">
+                <span class="card-category-icon">✓</span>
+                <span class="card-category-label">Helpdesk</span>
+              </div>
+              <div class="product-bottom">
+                <div class="benefit-item"><span class="benefit-text">Helpdesk ticketing</span></div>
+                <div class="benefit-item"><span class="benefit-text">Reliable customer support</span></div>
+                <div class="benefit-item"><span class="benefit-text">SLA & escalation management</span></div>
+                <a href="#" class="card-explore-btn">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ── TICKER STRIP ── -->
   <div class="ticker-wrap" data-reveal="fade-up">
@@ -899,7 +1150,7 @@
             cy = lerp(cy, hovered ? ty : 0, 0.14);
 
             const liftY = hovered ? -18 : 0;
-            const sc    = hovered ? 1.04 : 1;
+            const sc = hovered ? 1.04 : 1;
 
             if (!hovered && Math.abs(cx) < 0.04 && Math.abs(cy) < 0.04) {
               card.style.transform = '';
@@ -915,11 +1166,11 @@
 
           card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
-            tx = ((e.clientX - rect.left) / rect.width  - 0.5) * 18;
-            ty = ((e.clientY - rect.top)  / rect.height - 0.5) * 18;
+            tx = ((e.clientX - rect.left) / rect.width - 0.5) * 18;
+            ty = ((e.clientY - rect.top) / rect.height - 0.5) * 18;
             // drive the shine gradient position
-            card.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width  * 100).toFixed(1) + '%');
-            card.style.setProperty('--my', ((e.clientY - rect.top)  / rect.height * 100).toFixed(1) + '%');
+            card.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100).toFixed(1) + '%');
+            card.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100).toFixed(1) + '%');
             if (!hovered) hovered = true;
             if (!raf) raf = requestAnimationFrame(tick);
           });
@@ -979,23 +1230,27 @@
             <!-- Center badge — Oppty logo -->
             <div class="wo-badge">
               <div class="wo-badge__inner">
-                <img src="./ASSETS/images/oppty.png" alt="Oppty" class="wo-badge__logo"/>
+                <img src="./ASSETS/images/oppty.png" alt="Oppty" class="wo-badge__logo" />
               </div>
               <div class="wo-badge__pulse"></div>
             </div>
 
             <!-- Floating mini badges — 8 product logos (clickable) -->
             <!-- Inner ring: 4 products -->
-            <a href="https://task.theoppty.com/" target="_blank" class="wo-mini wo-mini--1 wo-mini--product" title="Taskly">
+            <a href="https://task.theoppty.com/" target="_blank" class="wo-mini wo-mini--1 wo-mini--product"
+              title="Taskly">
               <img src="./ASSETS/images/taskly.png" alt="Taskly" />
             </a>
-            <a href="https://chat.theoppty.com/" target="_blank" class="wo-mini wo-mini--2 wo-mini--product" title="Chatly">
+            <a href="https://chat.theoppty.com/" target="_blank" class="wo-mini wo-mini--2 wo-mini--product"
+              title="Chatly">
               <img src="./ASSETS/images/chatly.png" alt="Chatly" />
             </a>
-            <a href="https://theoppty.com/" target="_blank" class="wo-mini wo-mini--3 wo-mini--product" title="Peoplely">
+            <a href="https://theoppty.com/" target="_blank" class="wo-mini wo-mini--3 wo-mini--product"
+              title="Peoplely">
               <img src="./ASSETS/images/peoplely.png" alt="Peoplely" />
             </a>
-            <a href="https://hiring.theoppty.com/" target="_blank" class="wo-mini wo-mini--4 wo-mini--product" title="Hirely">
+            <a href="https://hiring.theoppty.com/" target="_blank" class="wo-mini wo-mini--4 wo-mini--product"
+              title="Hirely">
               <img src="./ASSETS/images/hirely.png" alt="Hirely" />
             </a>
             <!-- Outer ring: 4 more products -->
@@ -2322,7 +2577,7 @@
     (function () {
       var path = window.location.pathname.toLowerCase();
       var servicePages = ['it_services', 'ites_services', 'bpo', 'oppty_learn'];
-      var isServicePage = servicePages.some(function(p) { return path.indexOf(p) !== -1; });
+      var isServicePage = servicePages.some(function (p) { return path.indexOf(p) !== -1; });
       if (isServicePage) {
         var toggle = document.querySelector('.nav-dropdown__toggle');
         if (toggle) toggle.classList.add('nav-active');
@@ -2349,16 +2604,16 @@
 
       // Animation presets per data-reveal value
       var PRESETS = {
-        'fade-up':    { y: 24,   x: 0,    scale: 1,    blur: 3,  rot: 0  },
-        'fade-down':  { y: -18,  x: 0,    scale: 1,    blur: 2,  rot: 0  },
-        'fade-left':  { y: 0,    x: 32,   scale: 1,    blur: 3,  rot: 0  },
-        'fade-right': { y: 0,    x: -32,  scale: 1,    blur: 3,  rot: 0  },
-        'zoom-in':    { y: 10,   x: 0,    scale: 0.90, blur: 4,  rot: 0  },
-        'zoom-up':    { y: 18,   x: 0,    scale: 0.92, blur: 3,  rot: 0  },
-        'flip-up':    { y: 18,   x: 0,    scale: 0.95, blur: 2,  rot: 5  },
-        'blur-in':    { y: 12,   x: 0,    scale: 0.98, blur: 8,  rot: 0  },
-        'slide-left': { y: 0,    x: 48,   scale: 0.97, blur: 3,  rot: 0  },
-        'slide-right':{ y: 0,    x: -48,  scale: 0.97, blur: 3,  rot: 0  }
+        'fade-up': { y: 24, x: 0, scale: 1, blur: 3, rot: 0 },
+        'fade-down': { y: -18, x: 0, scale: 1, blur: 2, rot: 0 },
+        'fade-left': { y: 0, x: 32, scale: 1, blur: 3, rot: 0 },
+        'fade-right': { y: 0, x: -32, scale: 1, blur: 3, rot: 0 },
+        'zoom-in': { y: 10, x: 0, scale: 0.90, blur: 4, rot: 0 },
+        'zoom-up': { y: 18, x: 0, scale: 0.92, blur: 3, rot: 0 },
+        'flip-up': { y: 18, x: 0, scale: 0.95, blur: 2, rot: 5 },
+        'blur-in': { y: 12, x: 0, scale: 0.98, blur: 8, rot: 0 },
+        'slide-left': { y: 0, x: 48, scale: 0.97, blur: 3, rot: 0 },
+        'slide-right': { y: 0, x: -48, scale: 0.97, blur: 3, rot: 0 }
       };
 
       // Apply initial hidden state
@@ -2394,11 +2649,11 @@
             var t = Math.min(elapsed / duration, 1);
             var e = useSpring ? springEase(t) : easeOut(t);
 
-            var curY     = p.y * (1 - e);
-            var curX     = p.x * (1 - e);
+            var curY = p.y * (1 - e);
+            var curX = p.x * (1 - e);
             var curScale = p.scale + (1 - p.scale) * e;
-            var curBlur  = p.blur * (1 - e);
-            var curRot   = p.rot * (1 - e);
+            var curBlur = p.blur * (1 - e);
+            var curRot = p.rot * (1 - e);
 
             el.style.opacity = String(e);
             el.style.transform = [
@@ -2453,20 +2708,20 @@
         document.querySelectorAll(sel).forEach(function (el) {
           // Normalise to data-reveal
           var type = el.dataset.reveal
-                  || el.dataset.apReveal
-                  || el.dataset.beReveal
-                  || el.dataset.vmReveal
-                  || el.dataset.woReveal
-                  || 'fade-up';
+            || el.dataset.apReveal
+            || el.dataset.beReveal
+            || el.dataset.vmReveal
+            || el.dataset.woReveal
+            || 'fade-up';
           el.dataset.reveal = type;
 
           // Normalise delay
           var delay = el.dataset.delay
-                   || el.dataset.apDelay
-                   || el.dataset.beDelay
-                   || el.dataset.vmDelay
-                   || el.dataset.woDelay
-                   || '0';
+            || el.dataset.apDelay
+            || el.dataset.beDelay
+            || el.dataset.vmDelay
+            || el.dataset.woDelay
+            || '0';
           el.dataset.delay = delay;
 
           allEls.push(el);
@@ -2759,7 +3014,7 @@
           }
 
           var pVisible = false;
-          var pObs = new IntersectionObserver(function(e) { pVisible = e[0].isIntersecting; }, { threshold: 0.05 });
+          var pObs = new IntersectionObserver(function (e) { pVisible = e[0].isIntersecting; }, { threshold: 0.05 });
           pObs.observe(canvas);
 
           function animate() {
@@ -2950,7 +3205,7 @@
         var cx = SIZE / 2, cy = SIZE / 2, R = SIZE * 0.42;
 
         /* ── Rotation state ── */
-        var rotY = 0, rotX = 0.25;   /* slight tilt */ 
+        var rotY = 0, rotX = 0.25;   /* slight tilt */
         var targetRotY = 0, velY = 0.003;
         var isDragging = false, dragX = 0, lastDragX = 0, dragStartRotY = 0;
         /* float bob */
@@ -3160,10 +3415,10 @@
 
         /* ── Main render loop ── */
         var globeVisible = false;
-        (function() {
+        (function () {
           var gCanvas = document.getElementById('apGlobeCanvas');
           if (gCanvas) {
-            var gObs = new IntersectionObserver(function(e) { globeVisible = e[0].isIntersecting; }, { threshold: 0.05 });
+            var gObs = new IntersectionObserver(function (e) { globeVisible = e[0].isIntersecting; }, { threshold: 0.05 });
             gObs.observe(gCanvas);
           }
         })();
@@ -3472,7 +3727,7 @@
 
       // Pause when off-screen
       var isVisible = false;
-      var visObs = new IntersectionObserver(function(entries) {
+      var visObs = new IntersectionObserver(function (entries) {
         isVisible = entries[0].isIntersecting;
       }, { threshold: 0.05 });
       visObs.observe(canvas.closest('section') || canvas);
