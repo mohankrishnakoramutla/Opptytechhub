@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════
+﻿/* ══════════════════════════════════════════
    PRODUCTS PAGE  —  products.css
    Requires: index.css (loaded first)
 ══════════════════════════════════════════ */
@@ -507,7 +507,7 @@ body { background: #060c18; color: #fff; }
    COMPARISON TABLE
 ══════════════════════════════════════════ */
 .pd-compare {
-  background: #f0f4fa; padding: 100px 0 108px; position: relative;
+  background: #080b14; padding: 100px 0 108px; position: relative;
 }
 .pd-compare::before {
   content:''; position:absolute; top:0; left:0; right:0; height:5px;
@@ -517,38 +517,37 @@ body { background: #060c18; color: #fff; }
 
 .pd-compare__table-wrap {
   overflow-x: auto; border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 .pd-compare__table { width: 100%; border-collapse: collapse; font-family: 'DM Sans','Inter',sans-serif; }
 
-.pd-compare__table thead tr { background: #fff; }
+.pd-compare__table thead tr { background: rgba(255,255,255,0.05); }
 .pd-compare__table th {
   padding: 18px 24px;
   font-family: 'Poppins',sans-serif; font-size: 11px; font-weight: 800;
   letter-spacing: 2px; text-transform: uppercase;
-  color: #94a3b8; text-align: left;
-  border-bottom: 2px solid #e2e8f0;
+  color: rgba(255,255,255,0.40); text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.pd-compare__th--bad  { color: #ef4444; }
-.pd-compare__th--good { color: #22c55e; }
+.pd-compare__th--bad  { color: rgba(248,113,113,0.80); }
+.pd-compare__th--good { color: rgba(74,222,128,0.85); }
 
 .pd-compare__table tbody tr {
-  background: #fff; border-bottom: 1px solid #f1f5f9;
+  background: transparent; border-bottom: 1px solid rgba(255,255,255,0.05);
   transition: background .18s;
 }
 .pd-compare__table tbody tr:last-child { border-bottom: none; }
-.pd-compare__table tbody tr:hover { background: #f8fafc; }
+.pd-compare__table tbody tr:hover { background: rgba(255,255,255,0.03); }
 
 .pd-compare__table td {
-  padding: 16px 24px; font-size: 14px; color: #475569; vertical-align: middle;
+  padding: 16px 24px; font-size: 14px; color: rgba(255,255,255,0.60); vertical-align: middle;
 }
 .pd-compare__table td:first-child {
   font-family: 'Poppins',sans-serif; font-size: 13px;
-  font-weight: 600; color: #0f172a;
+  font-weight: 600; color: rgba(255,255,255,0.85);
 }
-.pd-compare__td--bad  { color: #94a3b8; }
-.pd-compare__td--good { color: #0f172a; font-weight: 500; }
+.pd-compare__td--bad  { color: rgba(255,255,255,0.35); }
+.pd-compare__td--good { color: rgba(255,255,255,0.88); font-weight: 500; }
 
 .pd-compare__x {
   display: inline-flex; align-items: center; justify-content: center;
@@ -573,7 +572,7 @@ body { background: #060c18; color: #fff; }
 /* ══════════════════════════════════════════
    ROADMAP
 ══════════════════════════════════════════ */
-.pd-roadmap { background: #080b14; padding: 100px 0 108px; }
+.pd-roadmap { background: #060c18; padding: 100px 0 108px; }
 .pd-roadmap__inner { max-width: 760px; margin: 0 auto; padding: 0 48px; }
 
 .pd-roadmap__steps { display: flex; flex-direction: column; }
@@ -717,7 +716,7 @@ body { background: #060c18; color: #fff; }
    PRODUCT ECOSYSTEM GRID
 ══════════════════════════════════════════ */
 .pd-grid-section {
-  background: #fff;
+  background: #080b14;
   padding: 96px 0 104px;
   position: relative;
 }
@@ -751,13 +750,13 @@ body { background: #060c18; color: #fff; }
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 4.5vw, 52px); font-weight: 900;
   letter-spacing: -1.5px; line-height: 1.10;
-  color: #0d1117; margin-bottom: 14px;
+  color: #fff; margin-bottom: 14px;
 }
 .pd-grid-section__title span { color: var(--orange); }
 
 .pd-grid-section__sub {
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 15px; line-height: 1.70; color: #64748b;
+  font-size: 15px; line-height: 1.70; color: rgba(255,255,255,0.48);
 }
 
 /* 4-col grid */
@@ -769,8 +768,8 @@ body { background: #060c18; color: #fff; }
 
 /* Individual card */
 .pd-eco-card {
-  background: #fff;
-  border: 1px solid #e8edf5;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
   padding: 26px 22px 28px;
   display: flex; flex-direction: column;
@@ -787,8 +786,8 @@ body { background: #060c18; color: #fff; }
 }
 .pd-eco-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
-  border-color: rgba(0,0,0,0.10);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.40);
+  border-color: rgba(255,255,255,0.16);
 }
 .pd-eco-card:hover::before { opacity: 1; }
 
@@ -821,13 +820,13 @@ body { background: #060c18; color: #fff; }
 .pd-eco-card__name {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px; font-weight: 800;
-  color: #0d1117; margin-bottom: 8px; letter-spacing: -0.3px;
+  color: #fff; margin-bottom: 8px; letter-spacing: -0.3px;
 }
 
 /* Description */
 .pd-eco-card__desc {
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 13px; line-height: 1.65; color: #64748b;
+  font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.50);
   margin-bottom: 16px; flex: 1;
 }
 
@@ -839,7 +838,7 @@ body { background: #060c18; color: #fff; }
 .pd-eco-card__features li {
   display: flex; align-items: center; gap: 8px;
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 12.5px; color: #475569; font-weight: 500;
+  font-size: 12.5px; color: rgba(255,255,255,0.62); font-weight: 500;
 }
 
 /* Coloured feature dots */
@@ -888,7 +887,7 @@ body { background: #060c18; color: #fff; }
    PRODUCT EXPERIENCE — scroll rows
 ══════════════════════════════════════════ */
 .pd-experience {
-  background: #eef1f8;
+  background: #060c18;
   padding: 96px 0 104px;
   position: relative;
 }
@@ -905,7 +904,7 @@ body { background: #060c18; color: #fff; }
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 4.5vw, 52px);
   font-weight: 900; letter-spacing: -1.5px;
-  color: #0d1117; line-height: 1.10;
+  color: #fff; line-height: 1.10;
 }
 .pd-experience__title span { color: var(--orange); }
 
@@ -964,14 +963,14 @@ body { background: #060c18; color: #fff; }
 .pd-exp-row__name {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(32px, 4vw, 52px); font-weight: 900;
-  letter-spacing: -1.5px; color: #0d1117;
+  letter-spacing: -1.5px; color: #fff;
   margin-bottom: 14px; line-height: 1;
 }
 
 .pd-exp-row__desc {
   font-family: 'DM Sans', 'Inter', sans-serif;
   font-size: 15px; line-height: 1.75;
-  color: #64748b; margin-bottom: 26px;
+  color: rgba(255,255,255,0.50); margin-bottom: 26px;
 }
 
 /* Metrics row */
@@ -981,7 +980,7 @@ body { background: #060c18; color: #fff; }
 .pd-exp-row__metric { display: flex; flex-direction: column; }
 .pd-exp-row__mval {
   font-family: 'Montserrat', sans-serif; font-size: 22px;
-  font-weight: 900; color: #0d1117; letter-spacing: -0.5px;
+  font-weight: 900; color: #fff; letter-spacing: -0.5px;
 }
 .pd-exp-row__mlbl {
   font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 700;
@@ -997,7 +996,7 @@ body { background: #060c18; color: #fff; }
 .pd-exp-row__features li {
   display: flex; align-items: center; gap: 9px;
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 13.5px; color: #334155; font-weight: 500;
+  font-size: 13.5px; color: rgba(255,255,255,0.65); font-weight: 500;
 }
 .pd-exp-row__features li::before {
   content: '✓'; color: var(--orange);
@@ -1011,8 +1010,8 @@ body { background: #060c18; color: #fff; }
 .pd-exp-row__tags span {
   font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 700;
   letter-spacing: 0.3px; border-radius: 100px; padding: 5px 13px;
-  background: rgba(37,99,235,0.07); color: #475569;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.50);
+  border: 1px solid rgba(255,255,255,0.10);
 }
 
 /* Bubble variant for chatly */
@@ -1042,7 +1041,7 @@ body { background: #060c18; color: #fff; }
    TEAM SOLUTIONS
 ══════════════════════════════════════════ */
 .pd-teams {
-  background: #fff;
+  background: #080b14;
   padding: 96px 0 104px;
   position: relative;
 }
@@ -1055,7 +1054,7 @@ body { background: #060c18; color: #fff; }
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, 4.5vw, 52px);
   font-weight: 900; letter-spacing: -1.5px;
-  color: #0d1117; line-height: 1.10;
+  color: #fff; line-height: 1.10;
 }
 .pd-teams__title span { color: var(--orange); }
 
@@ -1068,8 +1067,8 @@ body { background: #060c18; color: #fff; }
 
 /* Individual team card */
 .pd-team-card {
-  background: #fff;
-  border: 1px solid #e8edf5;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 18px;
   padding: 28px 24px 26px;
   display: flex; flex-direction: column;
@@ -1086,8 +1085,8 @@ body { background: #060c18; color: #fff; }
 }
 .pd-team-card:hover {
   transform: translateY(-7px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.09);
-  border-color: rgba(0,0,0,0.10);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.40);
+  border-color: rgba(255,255,255,0.16);
 }
 
 /* Coloured icon box */
@@ -1108,13 +1107,13 @@ body { background: #060c18; color: #fff; }
 /* Team name */
 .pd-team-card__name {
   font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 800;
-  color: #0d1117; margin-bottom: 8px; letter-spacing: -0.3px;
+  color: #fff; margin-bottom: 8px; letter-spacing: -0.3px;
 }
 
 /* Problem statement */
 .pd-team-card__prob {
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 13px; line-height: 1.65; color: #64748b; margin-bottom: 16px;
+  font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.48); margin-bottom: 16px;
 }
 
 /* Feature list */
@@ -1125,7 +1124,7 @@ body { background: #060c18; color: #fff; }
 .pd-team-card__features li {
   display: flex; align-items: center; gap: 8px;
   font-family: 'DM Sans', 'Inter', sans-serif;
-  font-size: 13px; color: #334155; font-weight: 500;
+  font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 500;
 }
 .pd-team-card__features li::before {
   content: '✓'; font-weight: 900; font-size: 11px; flex-shrink: 0;
@@ -1145,8 +1144,8 @@ body { background: #060c18; color: #fff; }
 .pd-team-card__products span {
   font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 700;
   letter-spacing: 0.3px; border-radius: 100px; padding: 4px 11px;
-  background: #f1f5f9; color: #64748b;
-  border: 1px solid #e2e8f0;
+  background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.50);
+  border: 1px solid rgba(255,255,255,0.10);
 }
 
 /* Result stat bar */
@@ -1177,7 +1176,7 @@ body { background: #060c18; color: #fff; }
    LIVE DASHBOARDS
 ══════════════════════════════════════════ */
 .pd-live {
-  background: #eef1f8;
+  background: #060c18;
   padding: 96px 0 104px;
 }
 .pd-live__inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
@@ -1194,10 +1193,10 @@ body { background: #060c18; color: #fff; }
 
 /* Mini stat card */
 .pd-live__mini {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
   border-radius: 16px; padding: 18px 20px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.20);
   opacity: 0; transform: translateY(20px);
   transition: transform .28s cubic-bezier(0.22,1,0.36,1), box-shadow .28s;
 }
@@ -1206,7 +1205,7 @@ body { background: #060c18; color: #fff; }
   transition: opacity .55s cubic-bezier(0.22,1,0.36,1),
               transform .55s cubic-bezier(0.22,1,0.36,1), box-shadow .28s;
 }
-.pd-live__mini:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.10); }
+.pd-live__mini:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.35); }
 
 .pd-live__mini-header {
   display: flex; align-items: center; justify-content: space-between;
@@ -1214,7 +1213,7 @@ body { background: #060c18; color: #fff; }
 }
 .pd-live__mini-name {
   font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700;
-  color: #64748b; letter-spacing: 0.3px;
+  color: rgba(255,255,255,0.45); letter-spacing: 0.3px;
 }
 .pd-live__mini-badge {
   font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 800;
@@ -1227,7 +1226,7 @@ body { background: #060c18; color: #fff; }
 
 .pd-live__mini-val {
   font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900;
-  color: #0d1117; letter-spacing: -1px; margin-bottom: 12px;
+  color: #fff; letter-spacing: -1px; margin-bottom: 12px;
 }
 
 /* Bar chart */
@@ -1254,18 +1253,18 @@ body { background: #060c18; color: #fff; }
 }
 
 .pd-live__cmd {
-  background: #fff; border: 1px solid #e2e8f0; border-radius: 20px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 20px;
   padding: 0 0 22px; overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.30);
 }
 .pd-live__cmd-header {
   display: flex; align-items: center; gap: 7px;
-  padding: 14px 20px; background: #f8fafc;
-  border-bottom: 1px solid #f1f5f9;
+  padding: 14px 20px; background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .pd-live__cmd-title {
   font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 700;
-  color: #0d1117; flex: 1; margin-left: 4px;
+  color: #fff; flex: 1; margin-left: 4px;
 }
 .pd-live__cmd-live {
   font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 800;
@@ -1281,16 +1280,16 @@ body { background: #060c18; color: #fff; }
 }
 .pd-live__cmd-stat {
   flex: 1; text-align: center;
-  border-right: 1px solid #f1f5f9;
+  border-right: 1px solid rgba(255,255,255,0.07);
 }
 .pd-live__cmd-stat:last-child { border-right: none; }
 .pd-live__cmd-val {
   font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900;
-  color: #0d1117; letter-spacing: -0.5px; display: block;
+  color: #fff; letter-spacing: -0.5px; display: block;
 }
 .pd-live__cmd-lbl {
   font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 600;
-  letter-spacing: 1px; text-transform: uppercase; color: #94a3b8;
+  letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.38);
 }
 
 /* Product icon row */
@@ -1314,20 +1313,20 @@ body { background: #060c18; color: #fff; }
 /* Bottom metrics */
 .pd-live__cmd-metrics {
   display: flex; padding: 0 20px; gap: 0;
-  border-top: 1px solid #f1f5f9; padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.07); padding-top: 16px;
 }
 .pd-live__cmd-metric {
   flex: 1; text-align: center;
-  border-right: 1px solid #f1f5f9;
+  border-right: 1px solid rgba(255,255,255,0.07);
 }
 .pd-live__cmd-metric:last-child { border-right: none; }
 .pd-live__cmd-mval {
   font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 900;
-  color: #0d1117; display: block; letter-spacing: -0.3px;
+  color: #fff; display: block; letter-spacing: -0.3px;
 }
 .pd-live__cmd-mlbl {
   font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.8px; color: #94a3b8;
+  text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.38);
 }
 
 /* Responsive */
@@ -1347,7 +1346,7 @@ body { background: #060c18; color: #fff; }
    CONNECTED ECOSYSTEM
 ══════════════════════════════════════════ */
 .pd-ecosystem {
-  background: #fff;
+  background: #080b14;
   padding: 96px 0 104px;
 }
 .pd-ecosystem__inner { max-width: 900px; margin: 0 auto; padding: 0 48px; text-align: center; }
@@ -1421,12 +1420,12 @@ body { background: #060c18; color: #fff; }
 
 .pd-orbit__node img {
   width: 32px; height: 32px; object-fit: contain;
-  background: #fff; border-radius: 9px; padding: 4px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.06); border-radius: 9px; padding: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.30);
 }
 .pd-orbit__node span {
   font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 700;
-  color: #475569; white-space: nowrap;
+  color: rgba(255,255,255,0.55); white-space: nowrap;
 }
 
 /* Benefit pills row */
@@ -1436,14 +1435,14 @@ body { background: #060c18; color: #fff; }
 .pd-eco-pill {
   display: inline-flex; align-items: center; gap: 7px;
   font-family: 'Poppins', sans-serif; font-size: 11.5px; font-weight: 700;
-  color: #475569; background: #f1f5f9; border: 1px solid #e2e8f0;
+  color: rgba(255,255,255,0.65); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
   border-radius: 100px; padding: 10px 18px;
   transition: transform .2s, box-shadow .2s, background .2s;
 }
 .pd-eco-pill svg { width: 16px; height: 16px; color: var(--orange); flex-shrink: 0; }
 .pd-eco-pill:hover {
-  background: #fff; transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.10); transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 @media (max-width: 600px) {
@@ -1455,4 +1454,991 @@ body { background: #060c18; color: #fff; }
   .pd-orbit__node { --radius: 125px; }
   .pd-orbit__center { width: 64px; height: 64px; }
   .pd-orbit__center img { width: 28px; height: 28px; }
+}
+
+
+/* ══════════════════════════════════════════
+   GLOBAL TYPOGRAPHY POLISH
+   Dark theme colour system — #060c18 base
+   White:     #ffffff  — headlines, key values
+   Muted-1:   rgba(255,255,255,0.72)  — primary body
+   Muted-2:   rgba(255,255,255,0.50)  — secondary body
+   Muted-3:   rgba(255,255,255,0.35)  — labels / captions
+   Accent:    var(--orange) #f26522   — highlights, links
+   Blue:      #60a5fa                 — blue accents
+══════════════════════════════════════════ */
+
+/* ── Hero ── */
+.pd-hero__title          { color: #ffffff; letter-spacing: -2px; }
+.pd-hero__sub            { color: rgba(255,255,255,0.58); line-height: 1.80; }
+.pd-hero__eyebrow-pill   { color: rgba(255,255,255,0.70); letter-spacing: 3px; }
+
+/* ── Stack card names (white bg cards stay readable) ── */
+.pd-stack__name          { color: #111827; font-weight: 700; }
+.pd-stack__hint          { color: rgba(255,255,255,0.38); letter-spacing: 3px; }
+
+/* ── Section headings (all dark sections) ── */
+.pd-grid-section__title,
+.pd-experience__title,
+.pd-teams__title,
+.pd-live .pd-teams__head h2 { color: #ffffff; }
+
+.pd-grid-section__sub,
+.pd-section-sub          { color: rgba(255,255,255,0.52); }
+
+/* ── Ecosystem grid cards ── */
+.pd-eco-card__name       { color: #f1f5f9; font-size: 15.5px; letter-spacing: -0.2px; }
+.pd-eco-card__desc       { color: rgba(255,255,255,0.50); font-size: 13px; line-height: 1.70; }
+.pd-eco-card__features li{ color: rgba(255,255,255,0.62); }
+
+/* ── Product experience rows ── */
+.pd-exp-row__cat         { color: var(--orange); letter-spacing: 3.5px; }
+.pd-exp-row__name        { color: #ffffff; letter-spacing: -1.5px; }
+.pd-exp-row__desc        { color: rgba(255,255,255,0.52); line-height: 1.80; }
+.pd-exp-row__mval        { color: #ffffff; }
+.pd-exp-row__mlbl        { color: rgba(255,255,255,0.38); letter-spacing: 1.2px; }
+.pd-exp-row__features li { color: rgba(255,255,255,0.65); font-size: 13.5px; line-height: 1.70; }
+.pd-exp-row__tags span   { color: rgba(255,255,255,0.48); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.09); }
+
+/* ── Team solution cards ── */
+.pd-team-card__name      { color: #f1f5f9; font-size: 16.5px; letter-spacing: -0.3px; }
+.pd-team-card__prob      { color: rgba(255,255,255,0.48); line-height: 1.70; }
+.pd-team-card__features li{ color: rgba(255,255,255,0.62); font-size: 13px; line-height: 1.65; }
+.pd-team-card__products span { color: rgba(255,255,255,0.48); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.09); }
+
+/* ── Live dashboard mini cards ── */
+.pd-live__mini-name      { color: rgba(255,255,255,0.50); }
+.pd-live__mini-val       { color: #ffffff; font-size: 22px; }
+.pd-live__cmd-title      { color: #ffffff; }
+.pd-live__cmd-val        { color: #ffffff; }
+.pd-live__cmd-lbl        { color: rgba(255,255,255,0.40); }
+.pd-live__cmd-mval       { color: #ffffff; }
+.pd-live__cmd-mlbl       { color: rgba(255,255,255,0.38); }
+
+/* ── Connected ecosystem ── */
+.pd-orbit__node span     { color: rgba(255,255,255,0.58); font-size: 9.5px; }
+.pd-eco-pill             { color: rgba(255,255,255,0.68); font-size: 12px; }
+
+/* ── Comparison table ── */
+.pd-compare__table td:first-child { color: rgba(255,255,255,0.88); font-size: 13px; }
+.pd-compare__table td             { color: rgba(255,255,255,0.58); }
+.pd-compare__td--good             { color: rgba(255,255,255,0.90); }
+.pd-compare__td--bad              { color: rgba(255,255,255,0.32); }
+.pd-compare__th--good             { color: rgba(74,222,128,0.90); }
+.pd-compare__th--bad              { color: rgba(248,113,113,0.80); }
+
+/* ── Roadmap ── */
+.pd-roadmap__step-content h4 { color: #ffffff; }
+.pd-roadmap__step-content p  { color: rgba(255,255,255,0.50); line-height: 1.75; }
+
+/* ── CTA ── */
+.pd-cta__title           { color: #ffffff; }
+.pd-cta__sub             { color: rgba(255,255,255,0.52); line-height: 1.80; }
+
+/* ── Section heading shared helpers ── */
+.pd-section-title        { color: #ffffff; }
+.pd-section-title--dark  { color: #ffffff; }
+
+/* ══════════════════════════════════════════
+   COMPARE TABLE — SVG icon badges
+══════════════════════════════════════════ */
+
+/* Capability column */
+.pd-compare__cap {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 13.5px !important; font-weight: 700 !important;
+  color: rgba(255,255,255,0.90) !important;
+  letter-spacing: -0.1px;
+}
+
+/* Header badge — Oppty Ecosystem */
+.pd-compare__th-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 800;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(74,222,128,0.95);
+}
+
+/* Shared icon badge */
+.pd-cmp-x,
+.pd-cmp-check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  flex-shrink: 0; margin-right: 10px;
+  vertical-align: middle; position: relative; top: -1px;
+}
+.pd-cmp-svg {
+  width: 11px; height: 11px;
+}
+
+/* ✕ Red badge */
+.pd-cmp-x {
+  background: rgba(239,68,68,0.14);
+  border: 1.5px solid rgba(239,68,68,0.30);
+  color: #f87171;
+  box-shadow: 0 0 8px rgba(239,68,68,0.12);
+  transition: box-shadow .2s;
+}
+tr:hover .pd-cmp-x {
+  box-shadow: 0 0 14px rgba(239,68,68,0.22);
+}
+
+/* ✓ Green badge */
+.pd-cmp-check {
+  background: rgba(34,197,94,0.14);
+  border: 1.5px solid rgba(34,197,94,0.30);
+  color: #4ade80;
+  box-shadow: 0 0 8px rgba(34,197,94,0.14);
+  transition: box-shadow .2s;
+}
+tr:hover .pd-cmp-check {
+  box-shadow: 0 0 16px rgba(34,197,94,0.28);
+}
+
+/* Cell text alignment with icon */
+.pd-compare__td--bad,
+.pd-compare__td--good {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Row hover glow effect on the good column */
+.pd-compare__table tbody tr {
+  transition: background .2s;
+}
+.pd-compare__table tbody tr:hover .pd-compare__td--good {
+  color: rgba(255,255,255,0.96) !important;
+}
+.pd-compare__table tbody tr:hover .pd-cmp-check {
+  background: rgba(34,197,94,0.22);
+  border-color: rgba(34,197,94,0.50);
+}
+
+/* ══════════════════════════════════════════
+   COMPARE TABLE — FULL REDESIGN
+   Animations + Hover FX + Colour System
+══════════════════════════════════════════ */
+
+/* ── Section background animated gradient ── */
+.pd-compare {
+  background: #060c18 !important;
+  position: relative; overflow: hidden;
+}
+
+/* Animated moving mesh behind the table */
+.pd-compare::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 50%, rgba(242,101,34,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 90% 50%, rgba(37,99,235,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 50% 100%, rgba(168,85,247,0.05) 0%, transparent 70%);
+  animation: pd-cmp-bg 12s ease-in-out infinite alternate;
+}
+@keyframes pd-cmp-bg {
+  0%   { transform: scale(1)   translateX(0); }
+  50%  { transform: scale(1.04) translateX(10px); }
+  100% { transform: scale(1)   translateX(-10px); }
+}
+
+.pd-compare__inner  { position: relative; z-index: 1; max-width: 960px !important; }
+
+/* ── Table wrapper — glassy border ── */
+.pd-compare__table-wrap {
+  border-radius: 24px !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  box-shadow:
+    0 0 0 1px rgba(242,101,34,0.06),
+    0 24px 80px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.06) !important;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+/* ── THEAD ── */
+.pd-compare__table thead tr {
+  background: rgba(255,255,255,0.04) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Capability column header */
+.pd-compare__table th:first-child {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 10px !important; font-weight: 800 !important;
+  letter-spacing: 3px !important; text-transform: uppercase !important;
+  color: rgba(255,255,255,0.38) !important;
+}
+
+/* "Multiple Standalone Tools" header — muted red */
+.pd-compare__th--bad {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 10px !important; font-weight: 800 !important;
+  letter-spacing: 2.5px !important; text-transform: uppercase !important;
+  color: rgba(248,113,113,0.72) !important;
+}
+
+/* "Oppty Ecosystem" header — bright green */
+.pd-compare__th--good {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 10px !important; font-weight: 800 !important;
+  letter-spacing: 2.5px !important; text-transform: uppercase !important;
+  color: rgba(74,222,128,0.90) !important;
+}
+
+/* ── TBODY ROWS ── */
+.pd-compare__table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+  transition:
+    background .3s cubic-bezier(0.22,1,0.36,1),
+    transform   .3s cubic-bezier(0.22,1,0.36,1),
+    box-shadow  .3s !important;
+  position: relative;
+  cursor: default;
+}
+
+/* Row entry animation */
+.pd-compare__table tbody tr {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.pd-compare__table tbody tr.pd-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition:
+    opacity .55s cubic-bezier(0.22,1,0.36,1),
+    transform .55s cubic-bezier(0.22,1,0.36,1) !important;
+}
+
+/* Hover — lift + left orange accent bar */
+.pd-compare__table tbody tr:hover {
+  background: rgba(255,255,255,0.04) !important;
+  transform: translateX(4px) !important;
+  box-shadow: -3px 0 0 0 var(--orange) !important;
+}
+
+/* ── CELLS ── */
+.pd-compare__table td {
+  padding: 18px 26px !important;
+  font-family: 'DM Sans', 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  vertical-align: middle !important;
+  transition: color .25s !important;
+}
+
+/* Capability column — bold white */
+.pd-compare__cap,
+.pd-compare__table td:first-child {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,0.88) !important;
+  letter-spacing: -0.1px !important;
+  width: 26% !important;
+}
+
+/* "Multiple Standalone Tools" column — dimmed red-tinted */
+.pd-compare__td--bad {
+  color: rgba(255,180,170,0.55) !important;
+  font-size: 13.5px !important;
+}
+tr:hover .pd-compare__td--bad {
+  color: rgba(255,180,170,0.75) !important;
+}
+
+/* "Oppty Ecosystem" column — bright white */
+.pd-compare__td--good {
+  color: rgba(255,255,255,0.92) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+}
+tr:hover .pd-compare__td--good {
+  color: #ffffff !important;
+}
+
+/* ── SVG icon badges — enhanced ── */
+.pd-cmp-x {
+  width: 24px !important; height: 24px !important;
+  background: rgba(239,68,68,0.12) !important;
+  border: 1.5px solid rgba(239,68,68,0.28) !important;
+  color: #f87171 !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important; justify-content: center !important;
+  margin-right: 11px !important;
+  vertical-align: middle !important; position: relative; top: -1px;
+  transition: background .25s, box-shadow .25s !important;
+}
+tr:hover .pd-cmp-x {
+  background: rgba(239,68,68,0.20) !important;
+  box-shadow: 0 0 10px rgba(239,68,68,0.22) !important;
+}
+
+.pd-cmp-check {
+  width: 24px !important; height: 24px !important;
+  background: rgba(34,197,94,0.13) !important;
+  border: 1.5px solid rgba(34,197,94,0.32) !important;
+  color: #4ade80 !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important; justify-content: center !important;
+  margin-right: 11px !important;
+  vertical-align: middle !important; position: relative; top: -1px;
+  transition: background .25s, box-shadow .25s !important;
+}
+tr:hover .pd-cmp-check {
+  background: rgba(34,197,94,0.22) !important;
+  box-shadow: 0 0 12px rgba(34,197,94,0.30) !important;
+}
+
+.pd-cmp-svg { width: 11px !important; height: 11px !important; }
+
+/* ── Last row no border ── */
+.pd-compare__table tbody tr:last-child {
+  border-bottom: none !important;
+}
+
+/* ── Staggered entry delays ── */
+.pd-compare__table tbody tr:nth-child(1) { transition-delay: 0ms !important; }
+.pd-compare__table tbody tr:nth-child(2) { transition-delay: 60ms !important; }
+.pd-compare__table tbody tr:nth-child(3) { transition-delay: 120ms !important; }
+.pd-compare__table tbody tr:nth-child(4) { transition-delay: 180ms !important; }
+.pd-compare__table tbody tr:nth-child(5) { transition-delay: 240ms !important; }
+.pd-compare__table tbody tr:nth-child(6) { transition-delay: 300ms !important; }
+.pd-compare__table tbody tr:nth-child(7) { transition-delay: 360ms !important; }
+
+/* ── Section heading overrides ── */
+.pd-compare .pd-section-title {
+  color: #ffffff !important;
+}
+.pd-compare .pd-section-title span {
+  color: var(--orange) !important;
+}
+.pd-compare .pd-eyebrow {
+  color: var(--orange) !important;
+}
+
+/* ── Th badge logo ── */
+.pd-compare__th-badge {
+  display: inline-flex !important;
+  align-items: center !important; gap: 8px !important;
+  color: rgba(74,222,128,0.95) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 10px !important; font-weight: 800 !important;
+  letter-spacing: 2px !important; text-transform: uppercase !important;
+}
+
+
+/* ══════════════════════════════════════════
+   BUILT FOR EVERY WORKFLOW
+   Background animation + Row hover FX
+══════════════════════════════════════════ */
+
+/* ── Section ── */
+.pd-experience {
+  background: #060c18 !important;
+  position: relative; overflow: hidden;
+}
+
+/* ── Animated background layer ── */
+.pd-exp-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  overflow: hidden;
+}
+
+/* Slow-moving colour orbs */
+.pd-exp-bg__orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px); will-change: transform;
+  opacity: 0; animation: pd-exp-orb-in 1.2s ease 0.3s forwards;
+}
+@keyframes pd-exp-orb-in {
+  to { opacity: 1; }
+}
+.pd-exp-bg__orb--1 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(242,101,34,0.12) 0%, transparent 70%);
+  top: -150px; left: -200px;
+  animation: pd-exp-orb-in 1.2s ease 0.3s forwards, pd-orb-float-1 20s ease-in-out 1.5s infinite alternate;
+}
+.pd-exp-bg__orb--2 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%);
+  top: 30%; right: -150px;
+  animation: pd-exp-orb-in 1.2s ease 0.5s forwards, pd-orb-float-2 25s ease-in-out 1.5s infinite alternate;
+}
+.pd-exp-bg__orb--3 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
+  bottom: -100px; left: 40%;
+  animation: pd-exp-orb-in 1.2s ease 0.7s forwards, pd-orb-float-3 18s ease-in-out 1.5s infinite alternate;
+}
+@keyframes pd-orb-float-1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(60px, 40px) scale(1.15); }
+}
+@keyframes pd-orb-float-2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-40px, 60px) scale(1.10); }
+}
+@keyframes pd-orb-float-3 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, -50px) scale(1.12); }
+}
+
+/* Dot grid */
+.pd-exp-bg__grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Animated scan lines */
+.pd-exp-bg__lines {
+  position: absolute; inset: 0; overflow: hidden;
+}
+.pd-exp-bg__line {
+  position: absolute; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(242,101,34,0.15), rgba(37,99,235,0.12), transparent);
+  animation: pd-scan-line 8s linear infinite;
+  opacity: 0;
+}
+.pd-exp-bg__line:nth-child(1) { animation-delay: 0s;   top: 15%; }
+.pd-exp-bg__line:nth-child(2) { animation-delay: 1.6s; top: 30%; }
+.pd-exp-bg__line:nth-child(3) { animation-delay: 3.2s; top: 50%; }
+.pd-exp-bg__line:nth-child(4) { animation-delay: 4.8s; top: 68%; }
+.pd-exp-bg__line:nth-child(5) { animation-delay: 6.4s; top: 85%; }
+@keyframes pd-scan-line {
+  0%   { opacity: 0; transform: scaleX(0); transform-origin: left; }
+  10%  { opacity: 1; transform: scaleX(1); transform-origin: left; }
+  80%  { opacity: 1; transform: scaleX(1); transform-origin: right; }
+  100% { opacity: 0; transform: scaleX(0); transform-origin: right; }
+}
+
+/* Make content sit above background */
+.pd-experience__head,
+.pd-exp-row { position: relative; z-index: 1; }
+
+/* ── Section title ── */
+.pd-experience__title {
+  font-size: clamp(30px, 5vw, 56px) !important;
+  letter-spacing: -2px !important;
+}
+.pd-experience__title span {
+  background: linear-gradient(90deg, var(--orange) 0%, #ff8c42 50%, #f26522 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Product row scroll-reveal ── */
+.pd-exp-row {
+  opacity: 0 !important;
+  transform: translateY(50px) !important;
+  transition: opacity .70s cubic-bezier(0.22,1,0.36,1),
+              transform .70s cubic-bezier(0.22,1,0.36,1) !important;
+}
+.pd-exp-row.pd-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ── Mock wrapper hover FX ── */
+.pd-exp-row__mock {
+  transition: transform .4s cubic-bezier(0.22,1,0.36,1),
+              box-shadow .4s cubic-bezier(0.22,1,0.36,1) !important;
+}
+.pd-exp-row:hover .pd-exp-row__mock {
+  transform: translateY(-10px) scale(1.02) !important;
+}
+.pd-exp-row__mock--blue:hover,
+.pd-exp-row:hover .pd-exp-row__mock--blue   { box-shadow: 0 32px 80px rgba(37,99,235,0.28) !important; }
+.pd-exp-row:hover .pd-exp-row__mock--purple { box-shadow: 0 32px 80px rgba(124,58,237,0.28) !important; }
+.pd-exp-row:hover .pd-exp-row__mock--green  { box-shadow: 0 32px 80px rgba(5,150,105,0.28) !important; }
+.pd-exp-row:hover .pd-exp-row__mock--orange { box-shadow: 0 32px 80px rgba(242,101,34,0.28) !important; }
+.pd-exp-row:hover .pd-exp-row__mock--teal   { box-shadow: 0 32px 80px rgba(13,148,136,0.28) !important; }
+.pd-exp-row:hover .pd-exp-row__mock--indigo { box-shadow: 0 32px 80px rgba(67,56,202,0.28) !important; }
+.pd-exp-row:hover .pd-exp-row__mock--rose   { box-shadow: 0 32px 80px rgba(225,29,72,0.28) !important; }
+
+/* Inner mock card hover — border glows */
+.pd-exp-row:hover .pd-exp-row__mock .pd-mock {
+  border-color: rgba(255,255,255,0.18) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08) !important;
+  transition: border-color .3s, box-shadow .3s !important;
+}
+
+/* ── Info column hover FX ── */
+.pd-exp-row__info {
+  transition: transform .4s cubic-bezier(0.22,1,0.36,1) !important;
+}
+.pd-exp-row:hover .pd-exp-row__info {
+  transform: translateX(6px) !important;
+}
+.pd-exp-row--flip:hover .pd-exp-row__info {
+  transform: translateX(-6px) !important;
+}
+
+/* Product name — gradient highlight on hover */
+.pd-exp-row__name {
+  transition: color .3s !important;
+}
+.pd-exp-row--flip:nth-of-type(2):hover .pd-exp-row__name { color: #c4b5fd !important; }  /* Chatly — purple */
+.pd-exp-row:nth-of-type(1):hover       .pd-exp-row__name { color: #93c5fd !important; }  /* Taskly — blue */
+.pd-exp-row:nth-of-type(3):hover       .pd-exp-row__name { color: #6ee7b7 !important; }  /* Peoplely — green */
+.pd-exp-row--flip:nth-of-type(4):hover .pd-exp-row__name { color: #fdba74 !important; }  /* Cliently — orange */
+.pd-exp-row:nth-of-type(5):hover       .pd-exp-row__name { color: #93c5fd !important; }  /* Meetly — blue */
+.pd-exp-row--flip:nth-of-type(6):hover .pd-exp-row__name { color: #5eead4 !important; }  /* Hirely — teal */
+.pd-exp-row:nth-of-type(7):hover       .pd-exp-row__name { color: #a5b4fc !important; }  /* Learnly — indigo */
+.pd-exp-row--flip:nth-of-type(8):hover .pd-exp-row__name { color: #fda4af !important; }  /* Supportly — rose */
+
+/* Metric values brighten on row hover */
+.pd-exp-row__mval {
+  transition: color .3s, text-shadow .3s !important;
+}
+.pd-exp-row:hover .pd-exp-row__mval {
+  text-shadow: 0 0 20px rgba(242,101,34,0.40) !important;
+}
+
+/* Feature bullets pulse on hover */
+.pd-exp-row__features li {
+  transition: color .25s, transform .25s !important;
+}
+.pd-exp-row:hover .pd-exp-row__features li {
+  color: rgba(255,255,255,0.80) !important;
+  transform: translateX(4px) !important;
+}
+.pd-exp-row:hover .pd-exp-row__features li:nth-child(2) { transition-delay: .05s !important; }
+.pd-exp-row:hover .pd-exp-row__features li:nth-child(3) { transition-delay: .10s !important; }
+
+/* Tag chips glow on hover */
+.pd-exp-row__tags span {
+  transition: background .25s, border-color .25s, color .25s, transform .25s !important;
+}
+.pd-exp-row:hover .pd-exp-row__tags span {
+  background: rgba(242,101,34,0.12) !important;
+  border-color: rgba(242,101,34,0.28) !important;
+  color: rgba(255,200,150,0.85) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Category label accent line */
+.pd-exp-row__cat {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.pd-exp-row__cat::before {
+  content: '';
+  width: 0; height: 2px;
+  background: var(--orange);
+  border-radius: 1px;
+  transition: width .4s cubic-bezier(0.22,1,0.36,1) !important;
+  display: inline-block;
+}
+.pd-exp-row:hover .pd-exp-row__cat::before { width: 20px !important; }
+
+/* View Product link arrow bounce */
+.pd-eco-card__link {
+  transition: gap .2s, color .2s !important;
+}
+.pd-exp-row:hover .pd-eco-card__link svg {
+  animation: pd-arrow-bounce .6s ease infinite alternate !important;
+}
+@keyframes pd-arrow-bounce {
+  from { transform: translateX(0); }
+  to   { transform: translateX(6px); }
+}
+
+/* Staggered row reveal delays */
+.pd-exp-row:nth-child(2)  { transition-delay: 0ms !important; }
+.pd-exp-row:nth-child(3)  { transition-delay: 80ms !important; }
+.pd-exp-row:nth-child(4)  { transition-delay: 160ms !important; }
+.pd-exp-row:nth-child(5)  { transition-delay: 240ms !important; }
+.pd-exp-row:nth-child(6)  { transition-delay: 320ms !important; }
+.pd-exp-row:nth-child(7)  { transition-delay: 400ms !important; }
+.pd-exp-row:nth-child(8)  { transition-delay: 480ms !important; }
+.pd-exp-row:nth-child(9)  { transition-delay: 560ms !important; }
+
+/* Divider line between rows */
+.pd-exp-row + .pd-exp-row {
+  padding-top: 80px;
+}
+.pd-exp-row + .pd-exp-row::before {
+  content: '';
+  position: absolute;
+  left: 48px; right: 48px;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+}
+
+
+/* ══════════════════════════════════════════
+   MEETLY LIVE VIDEO CALL MOCK
+══════════════════════════════════════════ */
+
+.pd-mock--meetly-live {
+  background: #0d1526 !important;
+  border: 1px solid rgba(37,99,235,0.20) !important;
+  border-radius: 18px; overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.55),
+              0 0 0 1px rgba(37,99,235,0.10) !important;
+}
+
+/* ── Header ── */
+.pd-mock--meetly-live .pd-mock__header {
+  background: rgba(255,255,255,0.04) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 12px 16px;
+  display: flex; align-items: center; gap: 6px;
+}
+.pd-mock--meetly-live .pd-mock__title {
+  font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 700;
+  color: rgba(255,255,255,0.75); margin-left: 6px; flex: 1;
+}
+
+/* Live pill */
+.pd-meetly__live-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 800;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: #4ade80; background: rgba(74,222,128,0.12);
+  border: 1px solid rgba(74,222,128,0.25);
+  border-radius: 100px; padding: 3px 9px;
+}
+.pd-meetly__live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
+  animation: pd-live-blink 1.4s ease-in-out infinite;
+}
+@keyframes pd-live-blink {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* ── Video grid ── */
+.pd-meetly__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 4px; padding: 8px;
+}
+
+/* Main tile — full width, taller */
+.pd-meetly__tile--main {
+  grid-column: 1 / -1;
+}
+
+/* Every tile */
+.pd-meetly__tile {
+  background: #0f1e3a;
+  border-radius: 12px; overflow: hidden;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 20px 10px 14px;
+  position: relative;
+  transition: transform .3s cubic-bezier(0.22,1,0.36,1),
+              box-shadow .3s, background .3s;
+  cursor: default;
+}
+.pd-meetly__tile--main { padding: 36px 10px 24px; }
+
+/* Tile hover */
+.pd-meetly__tile:hover {
+  background: #142040;
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.20);
+  z-index: 2;
+}
+
+/* Speaking highlight */
+.pd-meetly__tile--speaking {
+  border: 2px solid rgba(74,222,128,0.50);
+  background: #0f2244;
+  box-shadow: 0 0 0 3px rgba(74,222,128,0.12),
+              0 8px 32px rgba(74,222,128,0.08);
+  animation: pd-speaker-pulse 2.5s ease-in-out infinite;
+}
+@keyframes pd-speaker-pulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.12), 0 8px 32px rgba(74,222,128,0.08); }
+  50%      { box-shadow: 0 0 0 6px rgba(74,222,128,0.20), 0 8px 32px rgba(74,222,128,0.16); }
+}
+
+/* Speaking ring animation */
+.pd-meetly__speak-ring {
+  position: absolute; inset: 0;
+  border-radius: 12px;
+  border: 2px solid rgba(74,222,128,0.30);
+  animation: pd-speak-ring 1.8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes pd-speak-ring {
+  0%   { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.04); }
+}
+
+/* ── Avatar circles ── */
+.pd-meetly__avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 800;
+  color: #fff; margin-bottom: 10px;
+  transition: transform .3s;
+}
+.pd-meetly__tile--main .pd-meetly__avatar {
+  width: 64px; height: 64px; font-size: 20px;
+}
+.pd-meetly__tile:hover .pd-meetly__avatar { transform: scale(1.08); }
+
+/* Avatar colours */
+.pd-meetly__avatar--orange { background: linear-gradient(135deg, #f26522, #ff8c42); box-shadow: 0 4px 16px rgba(242,101,34,0.40); }
+.pd-meetly__avatar--blue   { background: linear-gradient(135deg, #2563eb, #60a5fa); box-shadow: 0 4px 16px rgba(37,99,235,0.35); }
+.pd-meetly__avatar--green  { background: linear-gradient(135deg, #059669, #34d399); box-shadow: 0 4px 16px rgba(5,150,105,0.35); }
+.pd-meetly__avatar--purple { background: linear-gradient(135deg, #7c3aed, #c4b5fd); box-shadow: 0 4px 16px rgba(124,58,237,0.35); }
+.pd-meetly__avatar--teal   { background: linear-gradient(135deg, #0d9488, #2dd4bf); box-shadow: 0 4px 16px rgba(13,148,136,0.35); }
+
+/* ── Name tags ── */
+.pd-meetly__name-tag {
+  font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  display: flex; align-items: center; gap: 5px;
+}
+
+/* Host badge */
+.pd-meetly__host-badge {
+  font-family: 'Poppins', sans-serif; font-size: 8.5px; font-weight: 800;
+  letter-spacing: 1px; text-transform: uppercase;
+  background: rgba(242,101,34,0.18); color: #fb923c;
+  border: 1px solid rgba(242,101,34,0.30);
+  border-radius: 100px; padding: 1px 6px;
+}
+
+/* ── Control bar ── */
+.pd-meetly__controls {
+  display: flex; justify-content: center; align-items: center;
+  gap: 8px; padding: 12px 16px 10px;
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.pd-meetly__ctrl {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: none; cursor: pointer;
+  transition: transform .2s cubic-bezier(0.22,1,0.36,1),
+              background .2s, box-shadow .2s;
+}
+.pd-meetly__ctrl svg { width: 16px; height: 16px; }
+
+.pd-meetly__ctrl--active {
+  background: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.80);
+}
+.pd-meetly__ctrl--active:hover {
+  background: rgba(255,255,255,0.18);
+  transform: scale(1.12);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* End call button — red */
+.pd-meetly__ctrl--end {
+  background: #ef4444; color: #fff;
+  box-shadow: 0 4px 14px rgba(239,68,68,0.35);
+  animation: pd-end-pulse 3s ease-in-out infinite;
+}
+.pd-meetly__ctrl--end:hover {
+  background: #dc2626;
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(239,68,68,0.55);
+  animation: none;
+}
+@keyframes pd-end-pulse {
+  0%,100% { box-shadow: 0 4px 14px rgba(239,68,68,0.35); }
+  50%      { box-shadow: 0 4px 22px rgba(239,68,68,0.60); }
+}
+
+}
+
+
+/* ══════════════════════════════════════════
+   MEETLY — PURE CSS ANIMATIONS (no JS)
+══════════════════════════════════════════ */
+
+/* ── Mock entry — slides in on page load ── */
+.pd-mock--meetly-live {
+  animation: meetly-entry .9s cubic-bezier(0.22,1,0.36,1) both;
+}
+@keyframes meetly-entry {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* ── All tiles fade in staggered ── */
+.pd-meetly__tile {
+  animation: tile-fadein .6s cubic-bezier(0.22,1,0.36,1) both;
+}
+.pd-meetly__tile:nth-child(1) { animation-delay: .10s; }
+.pd-meetly__tile:nth-child(2) { animation-delay: .22s; }
+.pd-meetly__tile:nth-child(3) { animation-delay: .34s; }
+.pd-meetly__tile:nth-child(4) { animation-delay: .46s; }
+.pd-meetly__tile:nth-child(5) { animation-delay: .58s; }
+@keyframes tile-fadein {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Avatar gentle float — each person bobs slightly ── */
+.pd-meetly__avatar {
+  animation: avatar-float 3.6s ease-in-out infinite;
+}
+.pd-meetly__tile:nth-child(1) .pd-meetly__avatar { animation-duration: 3.6s; animation-delay: 0s; }
+.pd-meetly__tile:nth-child(2) .pd-meetly__avatar { animation-duration: 4.2s; animation-delay: .5s; }
+.pd-meetly__tile:nth-child(3) .pd-meetly__avatar { animation-duration: 3.9s; animation-delay: 1.0s; }
+.pd-meetly__tile:nth-child(4) .pd-meetly__avatar { animation-duration: 4.5s; animation-delay: 1.5s; }
+.pd-meetly__tile:nth-child(5) .pd-meetly__avatar { animation-duration: 3.7s; animation-delay: .8s; }
+@keyframes avatar-float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+/* ── Speaking ring on Rakesh (main tile) — continuous pulse ── */
+.pd-meetly__tile--main .pd-meetly__speak-ring {
+  animation: speak-ring-pulse 2s ease-out infinite !important;
+}
+@keyframes speak-ring-pulse {
+  0%   { transform: scale(1);    opacity: .7; }
+  70%  { transform: scale(1.06); opacity: 0; }
+  100% { transform: scale(1.06); opacity: 0; }
+}
+
+/* ── Second ring on main tile for layered effect ── */
+.pd-meetly__tile--main::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 12px;
+  border: 2px solid rgba(74,222,128,0.20);
+  animation: speak-ring-pulse 2s ease-out .6s infinite;
+  pointer-events: none;
+}
+
+/* ── Tile border shimmer — cycles through participants ── */
+.pd-meetly__tile:nth-child(2) {
+  animation: tile-fadein .6s cubic-bezier(0.22,1,0.36,1) .22s both,
+             tile-speak-blue 12s ease-in-out 2s infinite;
+}
+.pd-meetly__tile:nth-child(3) {
+  animation: tile-fadein .6s cubic-bezier(0.22,1,0.36,1) .34s both,
+             tile-speak-green 12s ease-in-out 5s infinite;
+}
+.pd-meetly__tile:nth-child(4) {
+  animation: tile-fadein .6s cubic-bezier(0.22,1,0.36,1) .46s both,
+             tile-speak-purple 12s ease-in-out 8s infinite;
+}
+.pd-meetly__tile:nth-child(5) {
+  animation: tile-fadein .6s cubic-bezier(0.22,1,0.36,1) .58s both,
+             tile-speak-teal 12s ease-in-out 11s infinite;
+}
+
+@keyframes tile-speak-blue {
+  0%,15%,100% { border: 1px solid transparent; box-shadow: none; background: #0f1e3a; }
+  5%,10% {
+    border: 1px solid rgba(37,99,235,0.60);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15), 0 8px 24px rgba(37,99,235,0.18);
+    background: #102244;
+  }
+}
+@keyframes tile-speak-green {
+  0%,15%,100% { border: 1px solid transparent; box-shadow: none; background: #0f1e3a; }
+  5%,10% {
+    border: 1px solid rgba(5,150,105,0.60);
+    box-shadow: 0 0 0 3px rgba(5,150,105,0.15), 0 8px 24px rgba(5,150,105,0.18);
+    background: #0f2232;
+  }
+}
+@keyframes tile-speak-purple {
+  0%,15%,100% { border: 1px solid transparent; box-shadow: none; background: #0f1e3a; }
+  5%,10% {
+    border: 1px solid rgba(124,58,237,0.60);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15), 0 8px 24px rgba(124,58,237,0.18);
+    background: #13163a;
+  }
+}
+@keyframes tile-speak-teal {
+  0%,15%,100% { border: 1px solid transparent; box-shadow: none; background: #0f1e3a; }
+  5%,10% {
+    border: 1px solid rgba(13,148,136,0.60);
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.15), 0 8px 24px rgba(13,148,136,0.18);
+    background: #0e2232;
+  }
+}
+
+/* ── Name tags slide up on load ── */
+.pd-meetly__name-tag {
+  animation: nametag-in .5s cubic-bezier(0.22,1,0.36,1) both;
+}
+.pd-meetly__tile:nth-child(1) .pd-meetly__name-tag { animation-delay: .30s; }
+.pd-meetly__tile:nth-child(2) .pd-meetly__name-tag { animation-delay: .42s; }
+.pd-meetly__tile:nth-child(3) .pd-meetly__name-tag { animation-delay: .54s; }
+.pd-meetly__tile:nth-child(4) .pd-meetly__name-tag { animation-delay: .66s; }
+.pd-meetly__tile:nth-child(5) .pd-meetly__name-tag { animation-delay: .78s; }
+@keyframes nametag-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Control buttons pop in one by one ── */
+.pd-meetly__ctrl {
+  animation: ctrl-popin .4s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+.pd-meetly__ctrl:nth-child(1) { animation-delay: .70s; }
+.pd-meetly__ctrl:nth-child(2) { animation-delay: .82s; }
+.pd-meetly__ctrl:nth-child(3) { animation-delay: .94s; }
+.pd-meetly__ctrl:nth-child(4) { animation-delay: 1.06s; }
+.pd-meetly__ctrl:nth-child(5) { animation-delay: 1.18s; }
+@keyframes ctrl-popin {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Live pill blink already defined — enhance it ── */
+.pd-meetly__live-pill {
+  animation: livepill-in .5s ease .4s both;
+}
+@keyframes livepill-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── End call button breathing glow ── */
+.pd-meetly__ctrl--end {
+  animation:
+    ctrl-popin .4s cubic-bezier(0.34,1.56,0.64,1) 1.18s both,
+    end-breathe 2.5s ease-in-out 2s infinite !important;
+}
+@keyframes end-breathe {
+  0%,100% { box-shadow: 0 4px 14px rgba(239,68,68,0.35); }
+  50%      { box-shadow: 0 4px 26px rgba(239,68,68,0.65), 0 0 0 4px rgba(239,68,68,0.12); }
+}
+
+/* ── Host badge shimmer ── */
+.pd-meetly__host-badge {
+  animation: badge-shimmer 3s ease-in-out 1s infinite;
+}
+@keyframes badge-shimmer {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.6; }
+}
+
+/* ── Outer mock glow pulse ── */
+.pd-exp-row__mock--blue .pd-mock--meetly-live {
+  animation:
+    meetly-entry .9s cubic-bezier(0.22,1,0.36,1) both,
+    meetly-glow 4s ease-in-out 1s infinite alternate;
+}
+@keyframes meetly-glow {
+  from { box-shadow: 0 24px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(37,99,235,0.10); }
+  to   { box-shadow: 0 28px 100px rgba(37,99,235,0.22), 0 0 0 1px rgba(37,99,235,0.22); }
 }
