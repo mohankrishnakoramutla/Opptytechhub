@@ -1106,7 +1106,7 @@ header.past-hero .phone-link:hover {
 .hero-stats {
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 10px;
     margin-bottom: 20px;
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.10);
@@ -7117,8 +7117,7 @@ header.past-hero .nav-dropdown__toggle.active {
     white-space: nowrap;
 }
 .hero-ctx-chip--1 { top: 8%;  left: 3%;  animation-delay: 0s; }
-.hero-ctx-chip--2 { top: 50%; right: 2%; animation-delay: 1.4s; border-color: rgba(59,130,246,0.32); }
-.hero-ctx-chip--3 { bottom: 6%; left: 4%; animation-delay: 2.8s; }
+
 
 @media (max-width: 991px) {
     .hero-ctx-chip { display: none; }
