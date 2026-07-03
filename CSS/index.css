@@ -3747,7 +3747,6 @@ header.past-hero .phone-link:hover {
 
 
 
-
 .why-oppty-hero {
     position: relative;
     background: linear-gradient(135deg,
@@ -3760,6 +3759,7 @@ header.past-hero .phone-link:hover {
     overflow: hidden;
     isolation: isolate;
 }
+
 
 .wo-container-hero {
     position: relative;
@@ -3948,6 +3948,7 @@ header.past-hero .phone-link:hover {
 .wo-visual__wrap:hover .wo-mini__label {
     animation-play-state: paused;
 }
+
 
 /* WHY CHOOSE OPPTY SECTION */
 .why-oppty {
