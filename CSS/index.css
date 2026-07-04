@@ -9,7 +9,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     margin: 0;
     padding: 0;
 }
@@ -4038,7 +4038,7 @@ header.past-hero .phone-link:hover {
 }
 
 @media (max-width: 768px) {
-  .why-oppty-hero { padding: 60px 0; }
+  .why-oppty-hero { padding: 80px 0 60px; }
   .wo-container-hero { padding: 0 20px; }
   .wo-grid--split { gap: 24px !important; }
   .woh-title { font-size: clamp(22px, 5vw, 30px); }
@@ -4057,7 +4057,7 @@ header.past-hero .phone-link:hover {
 }
 
 @media (max-width: 480px) {
-  .why-oppty-hero { padding: 44px 0; }
+  .why-oppty-hero { padding: 80px 0 44px; }
   .wo-container-hero { padding: 0 16px; }
   .woh-eyebrow__text { font-size: 9px; letter-spacing: 1.2px; }
   .woh-title { font-size: clamp(20px, 6vw, 26px); margin-bottom: 10px; }
@@ -5913,7 +5913,7 @@ header.past-hero .phone-link:hover {
     position: relative;
     background: #0b0d12;
     color: rgba(255, 255, 255, 0.55);
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* SVG background layer */
@@ -6001,7 +6001,7 @@ header.past-hero .phone-link:hover {
     position: relative;
     display: block;
     text-align: center;
-    padding: 20px 0 0;
+    padding: 16px 0 20px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(100px, 22vw, 280px);
     font-weight: 900;
@@ -6012,8 +6012,10 @@ header.past-hero .phone-link:hover {
     pointer-events: none;
     user-select: none;
     z-index: 0;
-    line-height: 0.85;
-    overflow: hidden;
+    line-height: 1.2;
+    overflow: visible;
+    /* clip only horizontal overflow, never vertical */
+    clip-path: none;
 }
 
 /* All content above bg */
@@ -6311,7 +6313,9 @@ header.past-hero .phone-link:hover {
     }
 
     .footer-watermark {
-        font-size: clamp(80px, 22vw, 160px);
+        font-size: clamp(60px, 12vw, 150px);
+        line-height: 1.2;
+        padding-bottom: 20px;
     }
 }
 
