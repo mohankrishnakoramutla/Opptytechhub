@@ -255,11 +255,19 @@ nav a:hover::after {
 }
 
 header.past-hero nav a {
-  color: var(--orange);
+  color: rgba(255,255,255,0.7);
 }
 
 header.past-hero nav a:hover {
-  color: #d4530e;
+  color: #fff;
+}
+
+header.past-hero .phone-link {
+  color: rgba(255,255,255,0.55);
+}
+
+header.past-hero .phone-link:hover {
+  color: #fff;
 }
 
 .nav-actions { 
@@ -334,16 +342,16 @@ header.past-hero nav a:hover {
 .phone-link svg { 
   width: 13px; 
   height: 13px; 
-  fill: var(--orange); 
+  fill: var(--white); 
   flex-shrink: 0; 
 }
 
 header.past-hero .phone-link {
-  color: var(--orange);
+  color: var(--white);
 }
 
 header.past-hero .phone-link:hover {
-  color: #d4530e;
+  color: #fafafa;
 }
 
 /* ── Hamburger Menu ── */
