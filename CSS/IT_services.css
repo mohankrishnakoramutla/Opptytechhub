@@ -23,7 +23,7 @@
   --gray-light: #94A3B8;
   --gray-lighter: #CBD5E1;
   --light: #F1F5F9;
-  --white: #ffff;
+  --white: #ffffff;
   --success: #10B981;
   --bg: #080a0c;
   --bg-dark: #060c18;
@@ -255,11 +255,19 @@ nav a:hover::after {
 }
 
 header.past-hero nav a {
-  color: var(--orange);
+  color: rgba(255,255,255,0.7);
 }
 
 header.past-hero nav a:hover {
-  color: #d4530e;
+  color: #fff;
+}
+
+header.past-hero .phone-link {
+  color: rgba(255,255,255,0.55);
+}
+
+header.past-hero .phone-link:hover {
+  color: #fff;
 }
 
 .nav-actions { 
@@ -339,11 +347,11 @@ header.past-hero nav a:hover {
 }
 
 header.past-hero .phone-link {
-  color: var(--orange);
+  color: rgba(255,255,255,0.55);
 }
 
 header.past-hero .phone-link:hover {
-  color: #d4530e;
+  color: #fff;
 }
 
 /* ── Hamburger Menu ── */
@@ -2874,5 +2882,39 @@ iframe {
   .footer-copy,
   .footer-legal {
     font-size: 11px;
+  }
+}
+
+/* ── Footer Ghost Watermark ── */
+.footer-watermark {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 20px 0 0;
+  font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+  font-size: clamp(60px, 18vw, 280px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: transparent;
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.18);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  line-height: 0.85;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .footer-watermark {
+    font-size: clamp(48px, 20vw, 140px);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.18);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-watermark {
+    font-size: clamp(40px, 18vw, 100px);
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.18);
   }
 }

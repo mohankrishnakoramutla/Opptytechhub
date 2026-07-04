@@ -3,333 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="../CSS/Oppty_learn.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Website Under Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            overflow: hidden;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Glowing orbs background */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            animation: orbMove 8s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(108, 99, 255, 0.3);
+            top: -100px;
+            right: -100px;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 99, 182, 0.2);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -4s;
+        }
+
+        @keyframes orbMove {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, -30px) scale(1.1); }
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            z-index: 1;
+            max-width: 600px;
+            position: relative;
+        }
+
+        /* Animated Gears */
+        .icon-wrapper {
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .gear {
+            display: inline-block;
+            animation: spin 4s linear infinite;
+        }
+
+        .gear svg {
+            width: 90px;
+            height: 90px;
+            fill: #6c63ff;
+            filter: drop-shadow(0 0 20px rgba(108, 99, 255, 0.5));
+        }
+
+        .gear:nth-child(2) {
+            position: relative;
+            top: -10px;
+            left: -15px;
+            animation: spinReverse 3s linear infinite;
+        }
+
+        .gear:nth-child(2) svg {
+            width: 60px;
+            height: 60px;
+            fill: #ff63b6;
+            filter: drop-shadow(0 0 20px rgba(255, 99, 182, 0.5));
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes spinReverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        /* Title */
+        .title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff, #a78bfa, #ff63b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 50px;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #6c63ff, #ff63b6);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(108, 99, 255, 0.4);
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: left 0.5s ease;
+        }
+
+        .back-home:hover::before {
+            left: 100%;
+        }
+
+        .back-home:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 40px rgba(108, 99, 255, 0.6);
+        }
+
+        .back-home:active {
+            transform: translateY(0) scale(1);
+        }
+
+        .back-home svg {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-home:hover svg {
+            transform: translateX(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .gear svg {
+                width: 70px;
+                height: 70px;
+            }
+
+            .gear:nth-child(2) svg {
+                width: 45px;
+                height: 45px;
+            }
+
+            .back-home {
+                padding: 16px 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Animated Background Grid -->
-    <div class="bg-grid"></div>
+    <!-- Background orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
-    <!-- Floating Particles -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+    <!-- Main Content -->
+    <div class="container">
 
-    <!-- Scanline Overlay -->
-    <div class="scanlines"></div>
-
-
-
-    <main class="container">
-
-        <!-- Two-Column Layout -->
-        <div class="main-grid">
-
-            <!-- LEFT COLUMN -->
-            <div class="left-col">
-
-                <!-- Gears + Warning Row -->
-                <div class="top-icons">
-                    <div class="gears">
-                        <svg class="gear gear-1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <g transform="translate(60,60)">
-                                <path d="M0,-55 L5,-50 L5,-42 L10,-40 L15,-48 L20,-46 L18,-38 L22,-34 L30,-38 L34,-34 L28,-26 L32,-22 L40,-24 L42,-18 L36,-14 L38,-8 L46,-6 L46,0 L46,6 L38,8 L36,14 L42,18 L40,24 L32,22 L28,26 L34,34 L30,38 L22,34 L18,38 L20,46 L15,48 L10,40 L5,42 L5,50 L0,55 L-5,50 L-5,42 L-10,40 L-15,48 L-20,46 L-18,38 L-22,34 L-30,38 L-34,34 L-28,26 L-32,22 L-40,24 L-42,18 L-36,14 L-38,8 L-46,6 L-46,0 L-46,-6 L-38,-8 L-36,-14 L-42,-18 L-40,-24 L-32,-22 L-28,-26 L-34,-34 L-30,-38 L-22,-34 L-18,-38 L-20,-46 L-15,-48 L-10,-40 L-5,-42 L-5,-50 Z" fill="#2a2a4a" stroke="#f39c12" stroke-width="1.5"/>
-                                <circle r="22" fill="#1a1a2e" stroke="#f39c12" stroke-width="2"/>
-                                <circle r="8" fill="#0a0a1a" stroke="#f39c12" stroke-width="1.5"/>
-                                <circle r="3" fill="#f39c12" opacity="0.6"/>
-                            </g>
-                        </svg>
-                        <svg class="gear gear-2" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <g transform="translate(60,60)">
-                                <path d="M0,-42 L4,-38 L4,-32 L8,-30 L12,-36 L15,-35 L14,-28 L17,-26 L23,-29 L26,-26 L21,-20 L24,-17 L30,-18 L32,-14 L27,-10 L29,-6 L35,-5 L35,0 L35,5 L29,6 L27,10 L32,14 L30,18 L24,17 L21,20 L26,26 L23,29 L17,26 L14,28 L15,35 L12,36 L8,30 L4,32 L4,38 L0,42 L-4,38 L-4,32 L-8,30 L-12,36 L-15,35 L-14,28 L-17,26 L-23,29 L-26,26 L-21,20 L-24,17 L-30,18 L-32,14 L-27,10 L-29,6 L-35,5 L-35,0 L-35,-5 L-29,-6 L-27,-10 L-32,-14 L-30,-18 L-24,-17 L-21,-20 L-26,-26 L-23,-29 L-17,-26 L-14,-28 L-15,-35 L-12,-36 L-8,-30 L-4,-32 L-4,-38 Z" fill="#2a2a4a" stroke="#e74c3c" stroke-width="1.5"/>
-                                <circle r="16" fill="#1a1a2e" stroke="#e74c3c" stroke-width="2"/>
-                                <circle r="6" fill="#0a0a1a" stroke="#e74c3c" stroke-width="1.5"/>
-                                <circle r="2.5" fill="#e74c3c" opacity="0.6"/>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="warning-icon">
-                        <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="warning-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#f39c12"/>
-                                    <stop offset="100%" stop-color="#e67e22"/>
-                                </linearGradient>
-                                <filter id="warning-glow">
-                                    <feGaussianBlur stdDeviation="3" result="glow"/>
-                                    <feMerge>
-                                        <feMergeNode in="glow"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <polygon points="50,8 95,82 5,82" fill="url(#warning-grad)" stroke="#d35400" stroke-width="2" stroke-linejoin="round" filter="url(#warning-glow)"/>
-                            <polygon points="50,22 85,75 15,75" fill="#1a1a2e"/>
-                            <rect x="46" y="35" width="8" height="22" rx="4" fill="#f39c12"/>
-                            <circle cx="50" cy="65" r="4.5" fill="#f39c12"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Main Heading -->
-                <div class="heading-section">
-                    <p class="pre-heading">// STATUS: BUILDING</p>
-                    <h1 class="main-title">
-                        <span class="line-1">WEBSITE UNDER</span>
-                        <span class="line-2">DEVELOPMENT</span>
-                    </h1>
-                    <div class="title-underline">
-                        <span class="underline-segment"></span>
-                        <span class="underline-dot"></span>
-                        <span class="underline-segment"></span>
-                    </div>
-                </div>
-
-                <!-- Description -->
-                <p class="description">
-                    We're crafting a new digital experience. Our team is working hard to bring you something extraordinary.
-                </p>
-
-                <!-- Progress Section -->
-                <div class="progress-section">
-                    <div class="progress-header">
-                        <div class="progress-label">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                            </svg>
-                            <span>BUILD PROGRESS</span>
-                        </div>
-                        <span class="progress-value">73%</span>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" data-width="73">
-                            <div class="progress-shine"></div>
-                            <div class="progress-stripes"></div>
-                        </div>
-                    </div>
-                    <div class="progress-stats">
-                        <div class="stat">
-                            <span class="stat-label">Design</span>
-                            <span class="stat-value done">Done</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-label">Development</span>
-                            <span class="stat-value active">Active</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-label">Testing</span>
-                            <span class="stat-value pending">Queued</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Go Back to Home Button -->
-                <div class="home-button-section">
-                    <a href="../index.html" class="home-btn">
-                        <span class="home-btn-bg"></span>
-                        <span class="home-btn-content">
-                            <svg class="home-btn-icon-left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="19" y1="12" x2="5" y2="12"/>
-                                <polyline points="12 19 5 12 12 5"/>
-                            </svg>
-                            <svg class="home-btn-icon-home" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                            <span class="home-btn-text">GO BACK TO HOME</span>
-                        </span>
-                        <span class="home-btn-shine"></span>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="right-col">
-
-                <!-- Crane SVG -->
-                <div class="crane-section">
-                    <svg class="crane-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0" y1="240" x2="400" y2="240" stroke="#2a2a4a" stroke-width="2"/>
-                        <circle cx="170" cy="240" r="8" fill="#2a2a4a" stroke="#f39c12" stroke-width="1.5"/>
-                        <circle cx="230" cy="240" r="8" fill="#2a2a4a" stroke="#f39c12" stroke-width="1.5"/>
-                        <circle cx="170" cy="240" r="3" fill="#f39c12" opacity="0.4"/>
-                        <circle cx="230" cy="240" r="3" fill="#f39c12" opacity="0.4"/>
-                        <rect x="155" y="225" width="90" height="12" rx="3" fill="#2a2a4a" stroke="#e67e22" stroke-width="1.5"/>
-                        <rect x="193" y="45" width="14" height="180" fill="none" stroke="#e67e22" stroke-width="2"/>
-                        <line x1="193" y1="60" x2="207" y2="85" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="207" y1="60" x2="193" y2="85" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="193" y1="90" x2="207" y2="115" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="207" y1="90" x2="193" y2="115" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="193" y1="120" x2="207" y2="145" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="207" y1="120" x2="193" y2="145" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="193" y1="150" x2="207" y2="175" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="207" y1="150" x2="193" y2="175" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="193" y1="180" x2="207" y2="205" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <line x1="207" y1="180" x2="193" y2="205" stroke="#f39c12" stroke-width="1" opacity="0.7"/>
-                        <polygon points="200,25 188,48 212,48" fill="#e67e22" stroke="#f39c12" stroke-width="1.5"/>
-                        <rect x="60" y="42" width="220" height="7" rx="2" fill="#2a2a4a" stroke="#e67e22" stroke-width="1.5"/>
-                        <line x1="200" y1="28" x2="80" y2="42" stroke="#f1c40f" stroke-width="1.2"/>
-                        <line x1="200" y1="28" x2="140" y2="42" stroke="#f1c40f" stroke-width="1.2"/>
-                        <line x1="200" y1="28" x2="260" y2="42" stroke="#f1c40f" stroke-width="1.2"/>
-                        <rect x="280" y="42" width="60" height="7" rx="2" fill="#2a2a4a" stroke="#e67e22" stroke-width="1.5"/>
-                        <line x1="200" y1="28" x2="320" y2="42" stroke="#f1c40f" stroke-width="1.2"/>
-                        <rect x="310" y="49" width="25" height="20" rx="3" fill="#2a2a4a" stroke="#7f8c8d" stroke-width="1.5"/>
-                        <text x="322" y="63" text-anchor="middle" fill="#7f8c8d" font-size="8" font-family="Inter">CW</text>
-                        <rect x="95" y="38" width="16" height="6" rx="2" fill="#f39c12" class="trolley"/>
-                        <g class="crane-hook-group">
-                            <line x1="103" y1="49" x2="103" y2="155" stroke="#f1c40f" stroke-width="1.5"/>
-                            <path d="M97,155 L97,162 Q97,170 103,170 Q109,170 109,162 L109,155" fill="none" stroke="#f1c40f" stroke-width="2"/>
-                            <line x1="103" y1="149" x2="103" y2="155" stroke="#f1c40f" stroke-width="3"/>
-                            <rect x="85" y="172" width="36" height="28" rx="4" fill="#2a2a4a" stroke="#f39c12" stroke-width="1.5" class="hanging-block"/>
-                            <text x="103" y="189" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="700" font-family="JetBrains Mono">&lt;/&gt;</text>
-                        </g>
-                        <rect x="290" y="200" width="50" height="40" fill="#2a2a4a" stroke="#3498db" stroke-width="1" opacity="0.6"/>
-                        <rect x="295" y="205" width="12" height="12" fill="#3498db" opacity="0.15"/>
-                        <rect x="312" y="205" width="12" height="12" fill="#3498db" opacity="0.15"/>
-                        <rect x="329" y="205" width="6" height="12" fill="#3498db" opacity="0.15"/>
-                        <rect x="295" y="222" width="12" height="12" fill="#3498db" opacity="0.25"/>
-                        <rect x="312" y="222" width="12" height="12" fill="#3498db" opacity="0.1"/>
-                        <circle cx="200" cy="22" r="3" fill="#e74c3c" class="tower-light"/>
-                        <g class="worker" transform="translate(250, 215)">
-                            <circle cx="0" cy="0" r="4" fill="#f39c12"/>
-                            <rect x="-3" y="4" width="6" height="12" rx="2" fill="#e67e22"/>
-                            <rect x="-5" y="16" width="4" height="8" rx="1" fill="#2a2a4a"/>
-                            <rect x="1" y="16" width="4" height="8" rx="1" fill="#2a2a4a"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <!-- Coming Soon Badge -->
-                <div class="coming-soon-section">
-                    <div class="coming-soon-badge">
-                        <span class="pulse-dot"></span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        <span>COMING SOON</span>
-                    </div>
-
-                    <p class="coming-soon-text">
-                        Something incredible is on the way. Thank you for your patience.
-                    </p>
-                </div>
-
-                <!-- Tools Bar -->
-                <div class="tools-bar">
-                    <div class="tool-item" title="Wrench">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-                        </svg>
-                    </div>
-                    <div class="tool-item" title="Layers">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <div class="tool-item" title="Code">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"/>
-                            <polyline points="8 6 2 12 8 18"/>
-                        </svg>
-                    </div>
-                    <div class="tool-item" title="Monitor">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
-                    </div>
-                    <div class="tool-item" title="Settings">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#f1c40f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
-                        </svg>
-                    </div>
-                </div>
-
-            </div>
+        <!-- Animated Gears -->
+        <div class="icon-wrapper">
+            <span class="gear">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/>
+                </svg>
+            </span>
+            <span class="gear">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/>
+                </svg>
+            </span>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-topline"></div>
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="../index.html" class="footer-logo-wrap">
-                        <div class="footer-logo-icon">
-                            <img src="../ASSETS/images/oppty.png" alt="Oppty Logo" />
-                        </div>
-                    </a>
-                    <p class="footer-tagline">Future-Ready Technology.<br />Powered by People.</p>
-                    <div class="footer-contact-list">
-                        <p class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="currentColor"/></svg>Hyderabad, Telangana, India</p>
-                        <p class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1H8c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57-.11.34-.03.74-.24 1.01L6.6 10.8z" fill="currentColor"/></svg><a href="tel:+919491209900">+91 9491209900</a></p>
-                        <p class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg><a href="mailto:info@oppty.in">info@oppty.in</a></p>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-col-heading">Quick Links</h4>
-                    <ul class="footer-nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-col-heading">Our Services</h4>
-                    <ul class="footer-nav">
-                        <li><a href="IT_services.html">IT Services</a></li>
-                        <li><a href="ITES_services.html">ITES Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-col-heading">Products</h4>
-                    <ul class="footer-nav">
-                        <li><a href="https://task.theoppty.com/" target="_blank" rel="noopener">Taskly</a></li>
-                        <li><a href="https://chat.theoppty.com/" target="_blank" rel="noopener">Chatly</a></li>
-                        <li><a href="https://theoppty.com/" target="_blank" rel="noopener">Peoplely</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Cliently</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Meetly</a></li>
-                        <li><a href="https://hiring.theoppty.com/" target="_blank" rel="noopener">Hirely</a></li>
-                        <li><a href="Oppty_learn.html">Learnly</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Supportly</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-mid-divider"></div>
-            <div class="footer-bottom">
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/company/opptytech/" target="_blank" aria-label="LinkedIn" class="fsoc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    <a href="https://www.instagram.com/opptytech" target="_blank" aria-label="Instagram" class="fsoc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                    <a href="https://youtube.com/@mroppty" target="_blank" aria-label="YouTube" class="fsoc"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-                </div>
-                <p class="footer-copy">&copy; Copyright 2025 <strong>Oppty TechHub</strong>. All Rights Reserved.</p>
-                <div class="footer-legal"><a href="#">Terms of Service</a><span class="fl-sep">&middot;</span><a href="#">Privacy Policy</a></div>
-            </div>
-            <div class="footer-watermark" aria-hidden="true">OPPTY</div>
-        </footer>
-    </main>
+        <!-- Title -->
+        <h1 class="title">Website Under Development</h1>
+        <p class="subtitle">We're working hard to bring you something amazing. Please check back soon!</p>
 
-  
+        <!-- Back to Home Button -->
+        <a href="/" class="back-home" id="backHome">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Home
+        </a>
 
+    </div>
+
+    <script>
+        // Back to Home button click animation
+        document.getElementById('backHome').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Add click animation
+            this.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                this.style.transform = '';
+                // Navigate to home page - change URL as needed
+                window.location.href = '/';
+            }, 200);
+        });
+    </script>
 </body>
-
-<script src="../ASSETS/js/media-sticky.js" defer></script>
 </html>

@@ -15,6 +15,7 @@
 
   function injectStyles() {
     var css = `
+      #oppty-media { scroll-margin-top: 90px; }
       .media-sticky {
         position: fixed;
         right: 22px;
@@ -124,16 +125,61 @@
     var targetUrl = (inHtmlFolder ? '../index.html' : 'index.html') + '#oppty-media';
     link.setAttribute('href', targetUrl);
 
-    function scrollToMedia(offset) {
+    function getTargetY(offset) {
       var section = document.getElementById('oppty-media');
-      if (!section) return false;
-      var y = section.getBoundingClientRect().top + window.pageYOffset - (offset || 90);
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      if (!section) return null;
+      return section.getBoundingClientRect().top + window.pageYOffset - (offset || 90);
+    }
+
+    function scrollToMedia(smooth) {
+      var y = getTargetY();
+      if (y === null) return false;
+      window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
       return true;
     }
 
+    // ── Keeps correcting scroll position while images/canvas/video
+    //    below load and push #oppty-media further down the page.
+    //    Cancels the moment the user manually interacts. ──
+    function lockScrollToMedia() {
+      var cancelled = false;
+      var start = performance.now();
+      var BUDGET_MS = 3000;
+
+      function cancel() {
+        cancelled = true;
+        ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (evt) {
+          window.removeEventListener(evt, cancel, { passive: true });
+        });
+      }
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (evt) {
+        window.addEventListener(evt, cancel, { passive: true, once: true });
+      });
+
+      function tick() {
+        if (cancelled) return;
+        var y = getTargetY();
+        if (y !== null) {
+          var current = window.pageYOffset;
+          // Only correct if we've drifted noticeably (avoids fighting smooth-scroll animation)
+          if (Math.abs(current - y) > 4) {
+            window.scrollTo({ top: y, behavior: 'auto' });
+          }
+        }
+        if (performance.now() - start < BUDGET_MS) {
+          requestAnimationFrame(tick);
+        } else {
+          cancel();
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+
     link.addEventListener('click', function (e) {
-      if (scrollToMedia()) e.preventDefault();
+      if (scrollToMedia(true)) {
+        e.preventDefault();
+        lockScrollToMedia();
+      }
       // else browser navigates normally to targetUrl
     });
 
@@ -142,11 +188,24 @@
       link.classList.toggle('is-open');
     }, { passive: true });
 
-    // Auto-scroll if arriving with #oppty-media in the URL
+    // Auto-scroll if arriving with #oppty-media in the URL (from another page)
     if (window.location.hash === '#oppty-media') {
-      window.addEventListener('load', function () {
-        setTimeout(function () { scrollToMedia(); }, 700); // wait out page loader
-      });
+      var attempts = 0;
+      var tryScroll = function () {
+        attempts++;
+        if (scrollToMedia(false)) {
+          lockScrollToMedia();
+          return;
+        }
+        if (attempts < 40) setTimeout(tryScroll, 100);
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          setTimeout(tryScroll, 50);
+        });
+      } else {
+        setTimeout(tryScroll, 50);
+      }
     }
   }
 
