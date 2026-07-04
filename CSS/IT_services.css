@@ -783,21 +783,23 @@ iframe {
 }
 
 .hero .btn-primary,
-.cta-section .btn-primary {
+.cta-section .btn-primary,
+.pricing-card .btn-primary {
   background: var(--gradient-primary);
   color: #fff;
   box-shadow: 0 4px 15px rgba(242, 101, 34, 0.4);
 }
 
 .hero .btn-primary:hover,
-.cta-section .btn-primary:hover {
+.cta-section .btn-primary:hover,
+.pricing-card .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(242, 101, 34, 0.5);
 }
 
 .hero .btn-secondary,
 .cta-section .btn-secondary {
-  background: rgba(79, 70, 229, 0.08);
+  background: rgba(229, 155, 70, 0.08);
   color: var(--primary);
 }
 
@@ -809,13 +811,13 @@ iframe {
 .pricing-card .btn-outline {
   background: transparent;
   color: var(--primary);
-  border: 2px solid rgba(79, 70, 229, 0.3);
+  border: 2px solid rgba(242, 101, 34, 0.4);
   padding: 12px 26px;
 }
 
 .pricing-card .btn-outline:hover {
   border-color: var(--primary);
-  background: rgba(79, 70, 229, 0.05);
+  background: rgba(242, 101, 34, 0.08);
   transform: translateY(-2px);
 }
 
