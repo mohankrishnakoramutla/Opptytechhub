@@ -4024,12 +4024,56 @@ header.past-hero .phone-link:hover {
 
 @media (max-width: 1300px) {
   .wo-grid--split { grid-template-columns: 1fr 460px 1fr !important; }
+  .woh-title { width: auto; }
 }
+
 @media (max-width: 1100px) {
   .wo-grid--split { grid-template-columns: 1fr !important; text-align: center; }
   .woh-side, .woh-side--right { align-items: center; text-align: center; }
   .woh-item { text-align: left; }
   .wo-grid--split .wo-visual { order: -1; }
+  .woh-title { width: auto; font-size: clamp(22px, 3.5vw, 34px); }
+  .woh-desc { max-width: 560px; }
+  .woh-btns { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .why-oppty-hero { padding: 60px 0; }
+  .wo-container-hero { padding: 0 20px; }
+  .wo-grid--split { gap: 24px !important; }
+  .woh-title { font-size: clamp(22px, 5vw, 30px); }
+  .woh-desc { font-size: 13px; margin-bottom: 18px; }
+  .wo-grid--split .wo-visual { min-height: 360px !important; }
+  .wo-visual__wrap { max-width: 340px; }
+  .wo-badge { width: 150px; height: 150px; }
+  .wo-mini { width: 48px; height: 48px; }
+  .wo-mini__label { display: none; }
+  .woh-list { gap: 12px; margin-bottom: 18px; }
+  .woh-icon { width: 38px; height: 38px; }
+  .woh-icon svg { width: 17px; height: 17px; }
+  .woh-item h4 { font-size: 13px; }
+  .woh-item p { font-size: 11.5px; }
+  .woh-btn { padding: 10px 18px; font-size: 11.5px; }
+}
+
+@media (max-width: 480px) {
+  .why-oppty-hero { padding: 44px 0; }
+  .wo-container-hero { padding: 0 16px; }
+  .woh-eyebrow__text { font-size: 9px; letter-spacing: 1.2px; }
+  .woh-title { font-size: clamp(20px, 6vw, 26px); margin-bottom: 10px; }
+  .woh-desc { font-size: 12.5px; line-height: 1.65; margin-bottom: 14px; }
+  .wo-grid--split .wo-visual { min-height: 300px !important; }
+  .wo-visual__wrap { max-width: 280px; }
+  .wo-badge { width: 120px; height: 120px; }
+  .wo-badge__logo { padding: 16px; }
+  .wo-mini { width: 40px; height: 40px; padding: 5px; }
+  .woh-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .woh-btn { width: 100%; max-width: 280px; justify-content: center; }
+  .woh-list { gap: 10px; }
+  .woh-icon { width: 34px; height: 34px; border-radius: 9px; }
+  .woh-icon svg { width: 15px; height: 15px; }
+  .woh-item h4 { font-size: 12.5px; }
+  .woh-item p { font-size: 11px; }
 }
 
 
