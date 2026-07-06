@@ -9,7 +9,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: clip;
+    /* overflow-x: clip; */
     margin: 0;
     padding: 0;
 }
@@ -18,9 +18,9 @@ body {
     min-height: 100vh;
 }
 
-html {
+/* html {
     overflow-x: hidden;
-}
+} */
 
 :root {
     --orange: #f26522;
@@ -921,10 +921,29 @@ header.past-hero .phone-link:hover {
     padding: 13px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     transition: color 0.2s;
+    position: relative;
 }
 
 .mobile-nav a:hover {
     color: var(--white);
+}
+
+/* Active underline on mobile nav */
+.mobile-nav a.nav-active,
+.mobile-nav a.active {
+    color: #fff;
+}
+
+.mobile-nav a.nav-active::after,
+.mobile-nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 28px;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
 }
 
 .mobile-btns {
@@ -3047,13 +3066,15 @@ header.past-hero .phone-link:hover {
     opacity: 0.35;
 }
 
+/* Dark mask over the video — keeps the map visible but darkens it */
 .vm-bg__gradient {
     position: absolute;
     inset: 0;
     z-index: 1;
     background:
-        radial-gradient(ellipse 70% 50% at 15% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 60%),
-        radial-gradient(ellipse 70% 50% at 85% 80%, rgba(242, 101, 34, 0.15) 0%, transparent 60%);
+        rgba(5, 10, 30, 0.88),
+        radial-gradient(ellipse 70% 50% at 15% 20%, rgba(59, 130, 246, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 50% at 85% 80%, rgba(242, 101, 34, 0.20) 0%, transparent 60%);
 }
 
 .vm-bg__grid {
