@@ -5894,8 +5894,8 @@ header.past-hero .phone-link:hover {
 
 /* Logo image with zoom-out hover */
 .client-cell img {
-    max-width: 130px;
-    max-height: 52px;
+    max-width: 150px;
+    max-height: 80px;
     width: auto;
     height: auto;
     object-fit: contain;
