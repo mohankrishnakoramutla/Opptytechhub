@@ -9905,7 +9905,7 @@ header.past-hero .nav-dropdown__toggle.active {
     display: flex;
     gap: 16px;
     width: max-content;
-    animation: om-scroll 60s linear infinite;
+    animation: om-scroll 100s linear infinite;
     will-change: transform;
 }
 
