@@ -3399,6 +3399,32 @@ header.past-hero .nav-dropdown.open .nav-dropdown__toggle {
     line-height: 1.3;
 }
 
+/* ── Mobile dropdown active toggle ── */
+.mobile-dropdown__toggle {
+    position: relative;
+}
+
+.mobile-dropdown__toggle.nav-active {
+    color: #fff;
+}
+
+.mobile-dropdown__toggle.nav-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 28px;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(242,101,34,0.6);
+}
+
+/* Active link inside mobile dropdown sub-menu */
+.mobile-dropdown__menu li a.nav-active {
+    color: var(--orange) !important;
+}
+
 .mobile-dropdown {
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -3464,11 +3490,31 @@ header.past-hero .nav-dropdown.open .nav-dropdown__toggle {
     color: var(--orange);
 }
 
+.mobile-dropdown__menu li a.nav-active {
+    color: var(--orange) !important;
+    font-weight: 700;
+}
+
 .mobile-dropdown__menu li a::after {
     display: none;
 }
 
-/* ===== FOOTER ===== */
+/* ── Mobile dropdown toggle active state ── */
+.mobile-dropdown__toggle.nav-active {
+    color: #fff !important;
+}
+
+.mobile-dropdown__toggle.nav-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 28px;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(242,101,34,0.6);
+}
 .footer {
     position: relative;
     background: #0b0d12;
@@ -4913,4 +4959,19 @@ header.past-hero .nav-dropdown.open .nav-dropdown__toggle {
     font-size: clamp(40px, 18vw, 100px);
     -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.18);
   }
+}
+
+/* ── Active nav dropdown toggle underline ── */
+.nav-dropdown__toggle.nav-active::after {
+  width: calc(100% - 18px) !important;
+  background: var(--orange) !important;
+}
+
+/* ── Active item inside dropdown menu ── */
+.nav-dropdown__menu li a.nav-active .dd-label {
+  color: var(--orange) !important;
+}
+
+.nav-dropdown__menu li a.nav-active {
+  background: rgba(242, 101, 34, 0.10) !important;
 }

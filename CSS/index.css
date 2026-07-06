@@ -930,12 +930,15 @@ header.past-hero .phone-link:hover {
 
 /* Active underline on mobile nav */
 .mobile-nav a.nav-active,
-.mobile-nav a.active {
+.mobile-nav a.active,
+.mobile-nav a.ct-nav-active {
     color: #fff;
+    position: relative;
 }
 
 .mobile-nav a.nav-active::after,
-.mobile-nav a.active::after {
+.mobile-nav a.active::after,
+.mobile-nav a.ct-nav-active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -944,6 +947,29 @@ header.past-hero .phone-link:hover {
     height: 2px;
     background: var(--orange);
     border-radius: 2px;
+    box-shadow: 0 0 8px rgba(242,101,34,0.6);
+}
+
+/* Active state for Our Services toggle button in mobile dropdown */
+.mobile-dropdown__toggle.nav-active {
+    color: #fff;
+}
+
+.mobile-dropdown__toggle.nav-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 28px;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(242,101,34,0.6);
+}
+
+/* Active link inside mobile dropdown sub-menu */
+.mobile-dropdown__menu li a.nav-active {
+    color: var(--orange);
 }
 
 .mobile-btns {

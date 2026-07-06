@@ -12,269 +12,527 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
+            background-color: #0a0a0a;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
-            color: #fff;
-            padding: 20px;
         }
 
-        /* Glowing orbs background */
-        .orb {
+        /* Floating Particles */
+        .particles {
             position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 0;
-            animation: orbMove 8s ease-in-out infinite alternate;
         }
 
-        .orb-1 {
-            width: 400px;
-            height: 400px;
-            background: rgba(108, 99, 255, 0.3);
-            top: -100px;
-            right: -100px;
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp 6s infinite;
         }
 
-        .orb-2 {
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 99, 182, 0.2);
-            bottom: -100px;
-            left: -100px;
-            animation-delay: -4s;
+        .particle:nth-child(odd) { background: #ff6b00; }
+        .particle:nth-child(even) { background: #ff8c00; }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 5s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 7s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; animation-duration: 6s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 0.5s; animation-duration: 8s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 5.5s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 1.5s; animation-duration: 6.5s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 7.5s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 0.8s; animation-duration: 5.8s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 3.5s; animation-duration: 6.2s; }
+        .particle:nth-child(10) { left: 15%; animation-delay: 1.2s; animation-duration: 7.2s; }
+        .particle:nth-child(11) { left: 25%; animation-delay: 2.8s; animation-duration: 5.3s; }
+        .particle:nth-child(12) { left: 45%; animation-delay: 0.3s; animation-duration: 6.8s; }
+        .particle:nth-child(13) { left: 55%; animation-delay: 1.8s; animation-duration: 7.8s; }
+        .particle:nth-child(14) { left: 65%; animation-delay: 3.2s; animation-duration: 5.6s; }
+        .particle:nth-child(15) { left: 85%; animation-delay: 2.2s; animation-duration: 6.4s; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
         }
 
-        @keyframes orbMove {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(50px, -30px) scale(1.1); }
+        /* Spinning Rings */
+        .ring-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
         }
 
-        /* Main container */
+        .ring {
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ring:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255, 107, 0, 0.06);
+            animation: spinRing 20s linear infinite;
+        }
+
+        .ring:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background: #ff6b00;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #ff6b00;
+        }
+
+        .ring:nth-child(2) {
+            width: 620px;
+            height: 620px;
+            border: 1px solid rgba(255, 140, 0, 0.04);
+            animation: spinRing 28s linear infinite reverse;
+        }
+
+        .ring:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: #ff8c00;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff8c00;
+        }
+
+        .ring:nth-child(3) {
+            width: 740px;
+            height: 740px;
+            border: 1px solid rgba(255, 170, 0, 0.03);
+            animation: spinRing 35s linear infinite;
+        }
+
+        .ring:nth-child(3)::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            background: #ffaa00;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ffaa00;
+        }
+
+        @keyframes spinRing {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Corner Decorations */
+        .corner {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            z-index: 0;
+        }
+
+        .corner-tl { top: 15px; left: 15px; border-top: 2px solid rgba(255, 107, 0, 0.2); border-left: 2px solid rgba(255, 107, 0, 0.2); }
+        .corner-tr { top: 15px; right: 15px; border-top: 2px solid rgba(255, 107, 0, 0.2); border-right: 2px solid rgba(255, 107, 0, 0.2); }
+        .corner-bl { bottom: 15px; left: 15px; border-bottom: 2px solid rgba(255, 107, 0, 0.2); border-left: 2px solid rgba(255, 107, 0, 0.2); }
+        .corner-br { bottom: 15px; right: 15px; border-bottom: 2px solid rgba(255, 107, 0, 0.2); border-right: 2px solid rgba(255, 107, 0, 0.2); }
+
+        /* Main Container */
         .container {
             text-align: center;
             z-index: 1;
-            max-width: 600px;
             position: relative;
+            padding: 20px;
         }
 
-        /* Animated Gears */
-        .icon-wrapper {
-            margin-bottom: 30px;
-            display: inline-block;
+        /* Gears */
+        .gears {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
         }
 
-        .gear {
-            display: inline-block;
-            animation: spin 4s linear infinite;
+        .gear-icon { display: inline-block; }
+
+        .gear:nth-child(1) .gear-icon {
+            animation: rotateGear 4s linear infinite;
+            font-size: 50px;
+            color: #ff8c00;
+            filter: drop-shadow(0 0 12px rgba(255, 140, 0, 0.6));
         }
 
-        .gear svg {
-            width: 90px;
-            height: 90px;
-            fill: #6c63ff;
-            filter: drop-shadow(0 0 20px rgba(108, 99, 255, 0.5));
+        .gear:nth-child(2) .gear-icon {
+            animation: rotateGearReverse 4s linear infinite;
+            font-size: 80px;
+            margin-left: -10px;
+            margin-right: -10px;
+            color: #ff6b00;
+            filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.7));
         }
 
-        .gear:nth-child(2) {
-            position: relative;
-            top: -10px;
-            left: -15px;
-            animation: spinReverse 3s linear infinite;
+        .gear:nth-child(3) .gear-icon {
+            animation: rotateGear 4s linear infinite;
+            font-size: 45px;
+            color: #ffaa00;
+            filter: drop-shadow(0 0 12px rgba(255, 170, 0, 0.6));
         }
 
-        .gear:nth-child(2) svg {
-            width: 60px;
-            height: 60px;
-            fill: #ff63b6;
-            filter: drop-shadow(0 0 20px rgba(255, 99, 182, 0.5));
-        }
-
-        @keyframes spin {
+        @keyframes rotateGear {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
-        @keyframes spinReverse {
+        @keyframes rotateGearReverse {
             from { transform: rotate(0deg); }
             to { transform: rotate(-360deg); }
         }
 
         /* Title */
         .title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #fff, #a78bfa, #ff63b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease forwards;
-            opacity: 0;
-            transform: translateY(20px);
+            font-size: 46px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: glowTextOrange 2s ease-in-out infinite alternate;
         }
 
-        .subtitle {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 50px;
-            line-height: 1.6;
-            animation: fadeInUp 1s ease 0.2s forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeInUp {
+        @keyframes glowTextOrange {
+            from {
+                text-shadow: 0 0 10px rgba(255, 107, 0, 0.3),
+                             0 0 20px rgba(255, 107, 0, 0.2);
+            }
             to {
-                opacity: 1;
-                transform: translateY(0);
+                text-shadow: 0 0 20px rgba(255, 107, 0, 0.7),
+                             0 0 40px rgba(255, 140, 0, 0.5),
+                             0 0 60px rgba(255, 170, 0, 0.3),
+                             0 0 80px rgba(255, 107, 0, 0.15);
             }
         }
 
-        /* Back to Home Button */
-        .back-home {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 18px 50px;
-            background: linear-gradient(135deg, #6c63ff, #ff63b6);
-            border: none;
-            border-radius: 50px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(108, 99, 255, 0.4);
-            animation: fadeInUp 1s ease 0.4s forwards;
-            opacity: 0;
-            transform: translateY(20px);
-            position: relative;
-            overflow: hidden;
+        .subtitle {
+            font-size: 16px;
+            color: #ff8c00;
+            margin-bottom: 8px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out 0.3s both, pulseOrange 3s ease-in-out infinite;
+            text-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
         }
 
-        .back-home::before {
+        @keyframes pulseOrange {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 400px;
+            max-width: 90vw;
+            margin: 0 auto 25px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .progress-label span:last-child {
+            color: #ff8c00;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background: #1a1a1a;
+            border-radius: 3px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 107, 0, 0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 65%;
+            background: linear-gradient(90deg, #ff6b00, #ff8c00, #ffaa00, #ff6b00);
+            background-size: 200% 100%;
+            border-radius: 3px;
+            animation: shimmer 2s linear infinite, progressGrow 2s ease-out both;
+            box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes progressGrow {
+            from { width: 0%; }
+            to { width: 65%; }
+        }
+
+        /* Bouncing Dots */
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+
+        .dot:nth-child(1) { animation-delay: -0.32s; background: #ff6b00; box-shadow: 0 0 8px rgba(255, 107, 0, 0.6); }
+        .dot:nth-child(2) { animation-delay: -0.16s; background: #ff8c00; box-shadow: 0 0 8px rgba(255, 140, 0, 0.6); }
+        .dot:nth-child(3) { animation-delay: 0s; background: #ffaa00; box-shadow: 0 0 8px rgba(255, 170, 0, 0.6); }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+            40% { transform: scale(1.2); opacity: 1; }
+        }
+
+        /* Warning Stripes */
+        .warning-stripes {
+            width: 250px;
+            max-width: 80vw;
+            height: 6px;
+            margin: 0 auto 20px;
+            background: repeating-linear-gradient(45deg, #ff6b00, #ff6b00 10px, #1a1a1a 10px, #1a1a1a 20px);
+            border-radius: 4px;
+            opacity: 0.4;
+            animation: fadeInUp 1s ease-out 1.2s both;
+        }
+
+        /* Description */
+        .description {
+            color: #888;
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease-out 1.4s both;
+        }
+
+        .description strong { color: #ff8c00; }
+
+        /* ========== BACK TO HOME BUTTON ========== */
+        .btn-container {
+            animation: fadeInUp 1s ease-out 1.6s both;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 16px 45px;
+            border: 2px solid #ff6b00;
+            border-radius: 50px;
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.15), rgba(255, 140, 0, 0.08));
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 107, 0, 0.2);
+        }
+
+        .btn-home::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.3),
-                transparent
-            );
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.3), transparent);
             transition: left 0.5s ease;
         }
 
-        .back-home:hover::before {
+        .btn-home:hover::before {
             left: 100%;
         }
 
-        .back-home:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 12px 40px rgba(108, 99, 255, 0.6);
+        .btn-home:hover {
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.35), rgba(255, 140, 0, 0.2));
+            border-color: #ffaa00;
+            box-shadow: 0 0 30px rgba(255, 107, 0, 0.4),
+                        0 0 60px rgba(255, 107, 0, 0.15),
+                        inset 0 0 20px rgba(255, 107, 0, 0.1);
+            transform: translateY(-3px);
+            color: #ffcc00;
         }
 
-        .back-home:active {
-            transform: translateY(0) scale(1);
+        .btn-home:active {
+            transform: translateY(-1px);
         }
 
-        .back-home svg {
-            width: 22px;
-            height: 22px;
+        .btn-home .arrow {
+            font-size: 22px;
             transition: transform 0.3s ease;
         }
 
-        .back-home:hover svg {
-            transform: translateX(-5px);
+        .btn-home:hover .arrow {
+            transform: translateX(-6px);
+        }
+
+        .btn-home .home-icon {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-home:hover .home-icon {
+            transform: scale(1.2);
         }
 
         /* Responsive */
         @media (max-width: 600px) {
-            .title {
-                font-size: 2.2rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .gear svg {
-                width: 70px;
-                height: 70px;
-            }
-
-            .gear:nth-child(2) svg {
-                width: 45px;
-                height: 45px;
-            }
-
-            .back-home {
-                padding: 16px 40px;
-                font-size: 1rem;
-            }
+            .title { font-size: 26px; letter-spacing: 3px; }
+            .subtitle { font-size: 11px; letter-spacing: 4px; }
+            .tagline { font-size: 12px; }
+            .gear:nth-child(1) .gear-icon { font-size: 35px; }
+            .gear:nth-child(2) .gear-icon { font-size: 55px; margin-left: -8px; margin-right: -8px; }
+            .gear:nth-child(3) .gear-icon { font-size: 30px; }
+            .description { font-size: 13px; padding: 0 15px; }
+            .btn-home { font-size: 12px; padding: 13px 30px; }
+            .corner { width: 35px; height: 35px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Background orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
+    <!-- Corner Decorations -->
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <!-- Background Rings -->
+    <div class="ring-container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
 
     <!-- Main Content -->
     <div class="container">
 
-        <!-- Animated Gears -->
-        <div class="icon-wrapper">
-            <span class="gear">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/>
-                </svg>
-            </span>
-            <span class="gear">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/>
-                </svg>
-            </span>
+        <!-- Rotating Gears -->
+        <div class="gears">
+            <div class="gear"><span class="gear-icon">&#9881;</span></div>
+            <div class="gear"><span class="gear-icon">&#9881;</span></div>
+            <div class="gear"><span class="gear-icon">&#9881;</span></div>
         </div>
 
-        <!-- Title -->
-        <h1 class="title">Website Under Development</h1>
-        <p class="subtitle">We're working hard to bring you something amazing. Please check back soon!</p>
+        <h1 class="title">Under Development</h1>
+        <p class="subtitle">&#9888; Website Under Construction &#9888;</p>
+        <p class="tagline">We're Building Something Amazing</p>
 
-        <!-- Back to Home Button -->
-        <a href="/" class="back-home" id="backHome">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-            Back to Home
-        </a>
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>Development Progress</span>
+                <span>65%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Loading Dots -->
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <!-- Warning Stripes -->
+        <div class="warning-stripes"></div>
+
+        <p class="description">
+            Our website is currently <strong>under development</strong>. Our team is working
+            hard to bring you an incredible experience. Please check back soon! 🚀
+        </p>
+
+        <!-- ★ BACK TO HOME BUTTON ★ -->
+        <div class="btn-container">
+            <a href="/" class="btn-home">
+                <span class="arrow">&#8592;</span>
+                <span>Back to Home</span>
+                <span class="home-icon">🏠</span>
+            </a>
+        </div>
 
     </div>
 
-    <script>
-        // Back to Home button click animation
-        document.getElementById('backHome').addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // Add click animation
-            this.style.transform = 'scale(0.95)';
-            
-            setTimeout(() => {
-                this.style.transform = '';
-                // Navigate to home page - change URL as needed
-                window.location.href = '/';
-            }, 200);
-        });
-    </script>
 </body>
 </html>
