@@ -122,7 +122,17 @@
 
     // Work out relative path to index.html based on current folder depth
     var inHtmlFolder = window.location.pathname.indexOf('/HTML/') !== -1;
-    var targetUrl = (inHtmlFolder ? '../index.html' : 'index.html') + '#oppty-media';
+    var onIndexPage = !inHtmlFolder && (
+      window.location.pathname === '/' ||
+      window.location.pathname.toLowerCase().endsWith('index.html') ||
+      window.location.pathname.endsWith('/')
+    );
+
+    // On index page: use anchor-only href so the page loader doesn't intercept it
+    // On other pages: full path back to index.html
+    var targetUrl = onIndexPage
+      ? '#oppty-media'
+      : (inHtmlFolder ? '../index.html' : 'index.html') + '#oppty-media';
     link.setAttribute('href', targetUrl);
 
     function getTargetY(offset) {
