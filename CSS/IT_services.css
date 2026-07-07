@@ -140,9 +140,9 @@ body {
 header {
   position: fixed;
   top: 12px;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
-  width: calc(100% - 40px);
+  width: calc(70% - 30px);
   max-width: 1200px;
   z-index: 999;
   border-radius: 50px;
@@ -2956,4 +2956,48 @@ iframe {
 
 .nav-dropdown__menu li a.nav-active {
   background: rgba(242, 101, 34, 0.10) !important;
+}
+
+/* ── Oppty Media standalone button ── */
+#opptyMediaLink {
+  position: fixed;
+  top: 12px;
+  right: 80px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  height: var(--nav-h);
+  padding: 0 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.4s, box-shadow 0.4s, top 0.3s, color 0.25s;
+}
+#opptyMediaLink:hover {
+  color: #fff;
+  border-color: rgba(242, 101, 34, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+header.scrolled ~ #opptyMediaLink {
+  top: 8px;
+  height: var(--nav-h-sm);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(28px) saturate(170%);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 860px) {
+  #opptyMediaLink { display: none; }
 }
