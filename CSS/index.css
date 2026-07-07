@@ -10582,3 +10582,182 @@ header.past-hero .nav-dropdown__toggle.active {
 @media (max-width: 860px) {
     .om-side-sticky { display: none; }
 }
+
+
+/* ══════════════════════════════════════════
+   MOBILE NAV BUTTONS — Media Query Polish
+   Applies to ALL pages via index.css
+   Learnly | Phone | Oppty Media
+══════════════════════════════════════════ */
+
+/* Ensure mobile-btns block always shows inside open mobile nav */
+.mobile-nav.open .mobile-btns {
+    display: flex !important;
+    flex-direction: column;
+    gap: 9px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin-top: 10px;
+}
+
+/* ── Learnly button (btn-academy) ── */
+.mobile-btns .btn-academy {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 13px 20px;
+    background: var(--orange) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(242,101,34,0.40);
+    transition: background .2s, transform .2s, box-shadow .2s;
+}
+.mobile-btns .btn-academy:hover {
+    background: #d4530e !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(242,101,34,0.55);
+}
+
+/* ── Phone number link ── */
+.mobile-btns .phone-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.14) !important;
+    background: rgba(255,255,255,0.05) !important;
+    color: rgba(255,255,255,0.75) !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s, border-color .2s, background .2s;
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+.mobile-btns .phone-link:hover {
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.30) !important;
+    background: rgba(255,255,255,0.08) !important;
+}
+.mobile-btns .phone-link svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: var(--orange);
+}
+
+/* ── Oppty Media button (btn-training) ── */
+.mobile-btns .btn-training {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 13px 20px;
+    background: transparent !important;
+    color: var(--orange) !important;
+    border: 1.5px solid rgba(242,101,34,0.55) !important;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: background .2s, border-color .2s, transform .2s;
+}
+.mobile-btns .btn-training:hover {
+    background: rgba(242,101,34,0.10) !important;
+    border-color: var(--orange) !important;
+    transform: translateY(-2px);
+}
+
+/* ── Small screen refinements ── */
+@media (max-width: 480px) {
+    .mobile-btns {
+        gap: 8px;
+        padding-top: 14px;
+    }
+    .mobile-btns .btn-academy,
+    .mobile-btns .btn-training {
+        font-size: 11.5px;
+        padding: 12px 18px;
+    }
+    .mobile-btns .phone-link {
+        font-size: 11.5px;
+        padding: 11px 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-btns .btn-academy,
+    .mobile-btns .btn-training,
+    .mobile-btns .phone-link {
+        font-size: 11px;
+        padding: 11px 14px;
+    }
+}
+
+
+/* ══════════════════════════════════════════
+   HAMBURGER / MOBILE NAV — INCREASED WIDTH
+   Applies to all pages via index.css
+══════════════════════════════════════════ */
+
+/* Full-width header wrapper on mobile */
+@media (max-width: 860px) {
+    header {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Nav inner bar spans full width with generous padding */
+    .nav-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Mobile dropdown panel — full width, comfortable padding */
+    .mobile-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 20px 22px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Nav links inside mobile panel — stretch full width */
+    .mobile-nav > a,
+    .mobile-nav .mobile-dropdown {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Mobile-btns full width */
+    .mobile-btns {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Slightly tighter on very small screens */
+@media (max-width: 480px) {
+    .nav-inner {
+        padding: 0 12px !important;
+    }
+
+    .mobile-nav {
+        padding: 8px 14px 20px !important;
+    }
+}
