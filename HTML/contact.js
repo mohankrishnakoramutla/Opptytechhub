@@ -15,7 +15,7 @@ contactForm.addEventListener("submit", async function (e) {
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+        const response = await fetch("https://main-website.theoppty.com/api/contact/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
