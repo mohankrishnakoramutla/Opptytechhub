@@ -570,6 +570,67 @@ body {
     overflow-x: hidden;
 }
 
+
+
+
+
+#opptyMediaLink {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    height: var(--nav-h);
+    padding: 0 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background 0.4s, box-shadow 0.4s, top 0.3s, color 0.25s;
+}
+
+#opptyMediaLink:hover {
+    color: #ffffff;
+}
+
+/* Match navbar's scrolled state */
+header.scrolled ~ #opptyMediaLink {
+    top: 8px;
+    height: var(--nav-h-sm);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(28px) saturate(170%);
+    -webkit-backdrop-filter: blur(28px) saturate(170%);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 860px) {
+    #opptyMediaLink {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* FLOATING SOCIAL BAR */
 .social-bar {
     position: fixed;
@@ -10424,12 +10485,12 @@ header.past-hero .nav-dropdown__toggle.active {
 
 .om-side-sticky--left {
     float: left;
-    margin-left: 24px;
+    margin-left: 55px;
 }
 
 .om-side-sticky--right {
     float: right;
-    margin-right: 24px;
+    margin-right: 55px;
 }
 
 .om-side-sticky:hover {
