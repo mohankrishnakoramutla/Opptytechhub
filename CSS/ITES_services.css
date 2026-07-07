@@ -2954,7 +2954,7 @@ a:hover {
 header {
     position: fixed;
     top: 12px;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     width: calc(100% - 200px);
     max-width: 1200px;
