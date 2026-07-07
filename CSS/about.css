@@ -689,8 +689,11 @@ body { background: #060c18; color: #fff; }
    WHAT WE OFFER — 6-card grid
 ───────────────────────────────────── */
 .ab-offer {
-  background: linear-gradient(170deg, #f0f2f8 0%, #edf0f7 50%, #f3f4f9 100%);
+  background:
+    linear-gradient(170deg, rgba(5, 8, 20, 0.65) 0%, rgba(5, 8, 20, 0.60) 100%),
+    url('../ASSETS/images/what.webp') center/cover no-repeat;
   padding: 104px 0 112px;
+  position: relative;
 }
 
 .ab-offer__inner {
@@ -702,6 +705,15 @@ body { background: #060c18; color: #fff; }
 /* Section header override */
 .ab-offer .ab-section-head {
   margin-bottom: 64px;
+}
+
+/* Force white text on dark image background */
+.ab-offer .ab-section-head .ab-section-heading {
+  color: #fff !important;
+}
+
+.ab-offer .ab-section-head .ab-section-sub {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 /* Grid */
@@ -1329,7 +1341,7 @@ body { background: #060c18 !important; color: #fff; }
 .ab-mvv      { background: linear-gradient(160deg, #0a1428 0%, #0d1a35 100%) !important; }
 .ab-services { background: #060c18 !important; }
 .ab-why      { background: #0a1428 !important; }
-.ab-offer    { background: linear-gradient(170deg, #0a1428 0%, #0d1a35 50%, #060c18 100%) !important; }
+.ab-offer    { background: linear-gradient(170deg, rgba(5, 8, 20, 0.65) 0%, rgba(5, 8, 20, 0.60) 100%), url('../ASSETS/images/what.webp') center/cover no-repeat !important; }
 .ab-team     { background: #060c18 !important; }
 
 /* Hero info card */
