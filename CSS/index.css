@@ -3066,7 +3066,7 @@ header.past-hero .phone-link:hover {
             #0a1845 50%,
             #1e3a8a 75%,
             #0a1845 100%);
-    padding: 120px 0;
+    padding: 48px 0 60px;
     overflow: hidden;
     isolation: isolate;
 }
@@ -3244,7 +3244,7 @@ header.past-hero .phone-link:hover {
 /* HEADER */
 .vm-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
 
 .vm-eyebrow {
