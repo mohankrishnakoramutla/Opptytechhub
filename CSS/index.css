@@ -10709,18 +10709,19 @@ header.past-hero .nav-dropdown__toggle.active {
 
 
 /* ══════════════════════════════════════════
-   HAMBURGER / MOBILE NAV — INCREASED WIDTH
+   HAMBURGER / MOBILE NAV — FIXED ALIGNMENT
    Applies to all pages via index.css
 ══════════════════════════════════════════ */
 
-/* Full-width header wrapper on mobile */
 @media (max-width: 860px) {
     header {
         width: 100% !important;
-        overflow-x: hidden !important;
+        left: 0 !important;
+        right: 0 !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
     }
 
-    /* Nav inner bar spans full width with generous padding */
     .nav-inner {
         width: 100% !important;
         max-width: 100% !important;
@@ -10728,36 +10729,32 @@ header.past-hero .nav-dropdown__toggle.active {
         box-sizing: border-box !important;
     }
 
-    /* Mobile dropdown panel — full width, comfortable padding */
+    /* Full-width panel, no auto margin tricks */
     .mobile-nav {
+        position: static !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 10px 20px 22px !important;
+        margin: 0 !important;
+        left: auto !important;
+        right: auto !important;
+        padding: 8px 20px 22px !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
+        border-radius: 0 !important;
     }
 
-    /* Nav links inside mobile panel — stretch full width */
     .mobile-nav > a,
-    .mobile-nav .mobile-dropdown {
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Mobile-btns full width */
+    .mobile-nav .mobile-dropdown,
     .mobile-btns {
         width: 100% !important;
         box-sizing: border-box !important;
     }
 }
 
-/* Slightly tighter on very small screens */
 @media (max-width: 480px) {
     .nav-inner {
         padding: 0 12px !important;
     }
-
     .mobile-nav {
-        padding: 8px 14px 20px !important;
+        padding: 6px 14px 18px !important;
     }
 }
