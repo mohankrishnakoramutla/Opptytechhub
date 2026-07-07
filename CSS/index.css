@@ -4038,8 +4038,14 @@ header.past-hero .phone-link:hover {
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .woh-desc {
-  font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.75;
-  color: rgba(255,255,255,.58); margin-bottom: 26px; max-width: 440px;
+  font-family: 'DM Sans', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255,255,255,.58);
+  margin-bottom: 26px;
+  max-width: 440px;
+  letter-spacing: 0.15px;
 }
 
 .woh-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 26px; }
@@ -4088,8 +4094,8 @@ header.past-hero .phone-link:hover {
   .why-oppty-hero { padding: 80px 0 60px; }
   .wo-container-hero { padding: 0 20px; }
   .wo-grid--split { gap: 24px !important; }
-  .woh-title { font-size: clamp(22px, 5vw, 30px); }
-  .woh-desc { font-size: 13px; margin-bottom: 18px; }
+  .woh-title { font-size: clamp(20px, 5.5vw, 28px); width: auto; }
+  .woh-desc { font-size: 13.5px; margin-bottom: 18px; max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
   .wo-grid--split .wo-visual { min-height: 360px !important; }
   .wo-visual__wrap { max-width: 340px; }
   .wo-badge { width: 150px; height: 150px; }
@@ -4101,26 +4107,28 @@ header.past-hero .phone-link:hover {
   .woh-item h4 { font-size: 13px; }
   .woh-item p { font-size: 11.5px; }
   .woh-btn { padding: 10px 18px; font-size: 11.5px; }
+  .woh-side--left { overflow: hidden; }
 }
 
 @media (max-width: 480px) {
   .why-oppty-hero { padding: 80px 0 44px; }
   .wo-container-hero { padding: 0 16px; }
   .woh-eyebrow__text { font-size: 9px; letter-spacing: 1.2px; }
-  .woh-title { font-size: clamp(20px, 6vw, 26px); margin-bottom: 10px; }
-  .woh-desc { font-size: 12.5px; line-height: 1.65; margin-bottom: 14px; }
+  .woh-title { font-size: clamp(20px, 6vw, 26px); margin-bottom: 10px; width: auto; }
+  .woh-desc { font-size: 13px; line-height: 1.7; margin-bottom: 14px; max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
   .wo-grid--split .wo-visual { min-height: 300px !important; }
   .wo-visual__wrap { max-width: 280px; }
   .wo-badge { width: 120px; height: 120px; }
   .wo-badge__logo { padding: 16px; }
   .wo-mini { width: 40px; height: 40px; padding: 5px; }
-  .woh-btns { flex-direction: column; align-items: center; gap: 10px; }
-  .woh-btn { width: 100%; max-width: 280px; justify-content: center; }
+  .woh-btns { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
+  .woh-btn { width: 100%; max-width: 100%; justify-content: center; text-align: center; }
   .woh-list { gap: 10px; }
-  .woh-icon { width: 34px; height: 34px; border-radius: 9px; }
+  .woh-icon { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; }
   .woh-icon svg { width: 15px; height: 15px; }
   .woh-item h4 { font-size: 12.5px; }
   .woh-item p { font-size: 11px; }
+  .woh-side--left { overflow: hidden; }
 }
 
 
