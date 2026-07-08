@@ -1625,9 +1625,9 @@ header.past-hero .phone-link:hover {
 }
 
 .product-icon-wrapper {
-    width: 50px !important;
-    height: 26px !important;
-    border-radius: 6px !important;
+    width: 100% !important;
+    height: 90px !important;
+    border-radius: 10px !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -1635,10 +1635,12 @@ header.past-hero .phone-link:hover {
     flex-shrink: 0;
     transition: transform .2s ease;
     overflow: hidden;
+    padding: 8px !important;
+    background: rgba(255,255,255,0.06) !important;
 }
 
 .product-icon-wrapper img {
-    width: 200% !important;
+    width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
     display: block !important;
@@ -4026,8 +4028,8 @@ header.past-hero .phone-link:hover {
 }
 
 .wo-mini__inner img {
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 190%;
     object-fit: contain;
     display: block;
     border-radius: 8px;
@@ -4068,7 +4070,7 @@ header.past-hero .phone-link:hover {
 }
 
 .wo-mini:hover .wo-mini__label {
-    border-color: var(--orange);
+    border-color: var(--white);
     background: rgba(242, 101, 34, 0.22);
     box-shadow: 0 6px 20px rgba(242, 101, 34, 0.4);
 }
@@ -4089,6 +4091,7 @@ header.past-hero .phone-link:hover {
     box-shadow:
         0 18px 44px rgba(242, 101, 34, 0.5),
         0 0 0 2px rgba(242, 101, 34, 0.7) inset;
+    background: rgba(255, 255, 255, 1);
 }
 
 /* pause orbit + counter-spin on hover of the whole cluster so labels are easy to read */
@@ -4610,7 +4613,7 @@ header.past-hero .phone-link:hover {
     width: 62px;
     height: 62px;
     border-radius: 16px;
-    background: rgba(10, 20, 50, 0.85);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     display: flex;
@@ -4618,7 +4621,7 @@ header.past-hero .phone-link:hover {
     justify-content: center;
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.4),
-        0 0 0 1.5px rgba(255, 255, 255, 0.12) inset;
+        0 0 0 1.5px rgba(242, 101, 34, 0.35) inset;
     z-index: 3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
