@@ -106,7 +106,7 @@
       '</span>' +
       '<span class="media-sticky__text">' +
         '<span class="media-sticky__label">Featured In</span>' +
-        '<span class="media-sticky__sub">20+ News Outlets</span>' +
+        '<span class="media-sticky__sub">200+ News Outlets</span>' +
       '</span>' +
       '<span class="media-sticky__arrow">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
